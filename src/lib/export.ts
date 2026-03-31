@@ -36,22 +36,31 @@ export async function exportPngSnapshots(
 ): Promise<void> {
   const zip = new JSZip();
 
+  function canvasToBlob(canvas: HTMLCanvasElement): Promise<Blob> {
+    return new Promise((resolve, reject) => {
+      canvas.toBlob((b) => {
+        if (b) resolve(b);
+        else reject(new Error('Canvas toBlob returned null'));
+      }, 'image/png');
+    });
+  }
+
   // Axial
   const axialData = getAxialSlice(volume, axialIdx);
   const axialCanvas = sliceToCanvas(axialData, volume.width, volume.height, windowCenter, windowWidth);
-  const axialBlob = await new Promise<Blob>((resolve) => axialCanvas.toBlob((b) => resolve(b!), 'image/png'));
+  const axialBlob = await canvasToBlob(axialCanvas);
   zip.file('axial.png', axialBlob);
 
   // Sagittal
   const sagData = getSagittalSlice(volume, sagittalIdx);
   const sagCanvas = sliceToCanvas(sagData, volume.height, volume.depth, windowCenter, windowWidth);
-  const sagBlob = await new Promise<Blob>((resolve) => sagCanvas.toBlob((b) => resolve(b!), 'image/png'));
+  const sagBlob = await canvasToBlob(sagCanvas);
   zip.file('sagittal.png', sagBlob);
 
   // Coronal
   const corData = getCoronalSlice(volume, coronalIdx);
   const corCanvas = sliceToCanvas(corData, volume.width, volume.depth, windowCenter, windowWidth);
-  const corBlob = await new Promise<Blob>((resolve) => corCanvas.toBlob((b) => resolve(b!), 'image/png'));
+  const corBlob = await canvasToBlob(corCanvas);
   zip.file('coronal.png', corBlob);
 
   // Combined report
@@ -76,7 +85,7 @@ export async function exportPngSnapshots(
   rctx.fillText('Coronal', panelW * 2 + 30, 18);
   rctx.drawImage(corCanvas, panelW * 2 + 30, 28, panelW, panelW);
 
-  const reportBlob = await new Promise<Blob>((resolve) => reportCanvas.toBlob((b) => resolve(b!), 'image/png'));
+  const reportBlob = await canvasToBlob(reportCanvas);
   zip.file('report_combined.png', reportBlob);
 
   const content = await zip.generateAsync({ type: 'blob' });

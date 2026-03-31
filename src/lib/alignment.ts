@@ -73,7 +73,11 @@ export function resliceVolume(
   const newData = new Float32Array(width * height * depth);
 
   const invMatrix = mat4.create();
-  mat4.invert(invMatrix, rotMatrix);
+  const invertResult = mat4.invert(invMatrix, rotMatrix);
+  if (!invertResult) {
+    // Singular matrix — return original volume unchanged
+    return { ...volume };
+  }
 
   const cx = center.x;
   const cy = center.y;
@@ -118,16 +122,21 @@ function trilinearInterpolate(
   y: number,
   z: number
 ): number {
+  // Clamp to valid range first
+  if (x < 0 || x >= width - 1 || y < 0 || y >= height - 1 || z < 0 || z >= depth - 1) {
+    // Nearest-neighbor for edge voxels
+    const cx = Math.max(0, Math.min(width - 1, Math.round(x)));
+    const cy = Math.max(0, Math.min(height - 1, Math.round(y)));
+    const cz = Math.max(0, Math.min(depth - 1, Math.round(z)));
+    return data[cz * width * height + cy * width + cx] || 0;
+  }
+
   const x0 = Math.floor(x);
   const y0 = Math.floor(y);
   const z0 = Math.floor(z);
   const x1 = x0 + 1;
   const y1 = y0 + 1;
   const z1 = z0 + 1;
-
-  if (x0 < 0 || x1 >= width || y0 < 0 || y1 >= height || z0 < 0 || z1 >= depth) {
-    return 0;
-  }
 
   const xd = x - x0;
   const yd = y - y0;

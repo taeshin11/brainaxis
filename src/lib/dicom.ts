@@ -78,8 +78,13 @@ export function parseDicomFile(arrayBuffer: ArrayBuffer): DicomSlice | null {
         pixelData = new Uint16Array(arrayBuffer, pixelDataElement.dataOffset, rows * columns);
       }
     } else {
+      // 8-bit data: properly convert each byte to a 16-bit value
       const raw = new Uint8Array(arrayBuffer, pixelDataElement.dataOffset, rows * columns);
-      pixelData = new Uint16Array(raw);
+      const converted = new Uint16Array(rows * columns);
+      for (let i = 0; i < raw.length; i++) {
+        converted[i] = raw[i];
+      }
+      pixelData = converted;
     }
 
     const ps = getMultiNumeric(dataSet, 'x00280030', 2, [1, 1]);
@@ -198,6 +203,10 @@ export function applyWindowing(
   const lower = windowCenter - windowWidth / 2;
   const upper = windowCenter + windowWidth / 2;
   const range = upper - lower;
+  if (range <= 0) {
+    output.fill(128);
+    return output;
+  }
 
   for (let i = 0; i < sliceData.length; i++) {
     const val = sliceData[i];

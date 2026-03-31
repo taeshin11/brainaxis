@@ -54,7 +54,7 @@ function SliderControl({
         <input
           type="number"
           value={Math.round(value * 10) / 10}
-          onChange={(e) => onChange(Number(e.target.value))}
+          onChange={(e) => { const v = Number(e.target.value); if (!isNaN(v)) onChange(v); }}
           className="w-16 text-xs text-right font-mono bg-slate-100 border border-slate-200 rounded px-1.5 py-0.5 text-slate-700 focus:outline-none focus:border-indigo-400"
           step={step}
           min={min}

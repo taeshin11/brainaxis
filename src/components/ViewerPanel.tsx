@@ -177,6 +177,7 @@ export default function ViewerPanel({
     if (!canvas) return;
 
     const rect = canvas.getBoundingClientRect();
+    if (rect.width === 0 || rect.height === 0) return;
     const scaleX = canvas.width / rect.width;
     const scaleY = canvas.height / rect.height;
     const px = (e.clientX - rect.left) * scaleX;

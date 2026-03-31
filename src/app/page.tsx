@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -134,17 +134,22 @@ export default function Home() {
     }, 50);
   }, [acPoint, pcPoint, originalVolume]);
 
+  const rotationTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const handleManualRotation = useCallback((newPitch: number, newRoll: number, newYaw: number) => {
     if (!originalVolume) return;
-    const center: Point3D = {
-      x: originalVolume.width / 2,
-      y: originalVolume.height / 2,
-      z: originalVolume.depth / 2,
-    };
-    const rotMatrix = buildRotationMatrix(newPitch, newRoll, newYaw);
-    const rotated = resliceVolume(originalVolume, rotMatrix, center);
-    setVolume(rotated);
-    setIsAligned(true);
+    // Debounce reslicing — heavy computation
+    if (rotationTimerRef.current) clearTimeout(rotationTimerRef.current);
+    rotationTimerRef.current = setTimeout(() => {
+      const center: Point3D = {
+        x: originalVolume.width / 2,
+        y: originalVolume.height / 2,
+        z: originalVolume.depth / 2,
+      };
+      const rotMatrix = buildRotationMatrix(newPitch, newRoll, newYaw);
+      const rotated = resliceVolume(originalVolume, rotMatrix, center);
+      setVolume(rotated);
+      setIsAligned(true);
+    }, 150);
   }, [originalVolume]);
 
   const handleReset = useCallback(() => {

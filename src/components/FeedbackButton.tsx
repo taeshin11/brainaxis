@@ -18,25 +18,22 @@ export default function FeedbackButton() {
 
     setStatus('sending');
     try {
-      // Send via Formspree
       const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID || '';
       if (formspreeId) {
-        await fetch(`https://formspree.io/f/${formspreeId}`, {
+        const res = await fetch(`https://formspree.io/f/${formspreeId}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             message,
-            email: email || 'not provided',
-            _replyto: email || undefined,
+            ...(email ? { email, _replyto: email } : { email: 'not provided' }),
             _subject: `BrainAxis Feedback: ${message.slice(0, 50)}`,
           }),
         });
-      }
-      // Also send directly via mailto fallback using a hidden form
-      // This ensures feedback reaches the email even without Formspree
-      if (!formspreeId) {
-        const mailto = `mailto:taeshinkim11@gmail.com?subject=${encodeURIComponent('BrainAxis Feedback')}&body=${encodeURIComponent(`Feedback: ${message}\n\nFrom: ${email || 'Anonymous'}`)}`;
-        window.open(mailto, '_blank');
+        if (!res.ok) throw new Error('Failed');
+      } else {
+        // Fallback: open mailto link
+        const mailto = `mailto:taeshinkim11@gmail.com?subject=${encodeURIComponent('BrainAxis Feedback')}&body=${encodeURIComponent(`${message}\n\nFrom: ${email || 'Anonymous'}`)}`;
+        window.location.href = mailto;
       }
       setStatus('sent');
       setTimeout(() => {
@@ -46,6 +43,7 @@ export default function FeedbackButton() {
         setStatus('idle');
       }, 2000);
     } catch {
+      // On failure, revert to idle so user can retry
       setStatus('idle');
     }
   };
