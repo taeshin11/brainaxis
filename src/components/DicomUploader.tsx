@@ -3,6 +3,7 @@
 import { useCallback, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Upload, FileImage, Loader2 } from 'lucide-react';
+import Link from 'next/link';
 
 interface DicomUploaderProps {
   onFilesLoaded: (files: ArrayBuffer[]) => void;
@@ -139,6 +140,12 @@ export default function DicomUploader({ onFilesLoaded, isLoading, progress }: Di
           )}
         </AnimatePresence>
       </div>
+      <p className="mt-4 text-sm text-slate-400">
+        First time?{' '}
+        <Link href="/how-to-use" className="text-indigo-500 hover:text-indigo-600 underline underline-offset-2">
+          See the step-by-step guide
+        </Link>
+      </p>
     </motion.div>
   );
 }

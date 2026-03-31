@@ -1,6 +1,7 @@
 'use client';
 
-import { Brain, Upload } from 'lucide-react';
+import Link from 'next/link';
+import { Brain, Upload, HelpCircle } from 'lucide-react';
 
 interface HeaderProps {
   hasVolume: boolean;
@@ -17,6 +18,19 @@ export default function Header({ hasVolume, onUploadNew }: HeaderProps) {
           <span className="hidden sm:inline text-xs text-slate-400 ml-2">AC-PC Alignment Tool</span>
         </div>
         <div className="flex items-center gap-2">
+          <Link
+            href="/how-to-use"
+            className="hidden sm:flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-sm text-slate-500 hover:text-slate-700 hover:bg-slate-100 transition-all"
+          >
+            <HelpCircle className="w-3.5 h-3.5" />
+            Guide
+          </Link>
+          <Link
+            href="/about"
+            className="hidden sm:inline-block px-2.5 py-1.5 rounded-lg text-sm text-slate-500 hover:text-slate-700 hover:bg-slate-100 transition-all"
+          >
+            About
+          </Link>
           {hasVolume && (
             <button
               onClick={onUploadNew}
