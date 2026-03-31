@@ -11,6 +11,7 @@ import FeedbackButton from '@/components/FeedbackButton';
 import { parseDicomFile, buildVolume, DicomVolume } from '@/lib/dicom';
 import { Point3D, computeACPCAlignment, buildRotationMatrix, resliceVolume } from '@/lib/alignment';
 import { exportPngSnapshots, exportDicomZip } from '@/lib/export';
+import ErrorBoundary from '@/components/ErrorBoundary';
 import { _post } from '@/utils/analytics';
 
 export default function Home() {
@@ -186,6 +187,7 @@ export default function Home() {
   }, [volume]);
 
   return (
+    <ErrorBoundary>
     <div className="min-h-screen flex flex-col bg-[#F8FAFC]">
       <Header hasVolume={!!volume} onUploadNew={handleUploadNew} />
 
@@ -209,7 +211,7 @@ export default function Home() {
               {/* Desktop Layout */}
               <div className="hidden lg:grid lg:grid-cols-[1fr_280px] gap-4">
                 <div className="space-y-4">
-                  <div className="grid grid-cols-3 gap-3" style={{ minHeight: '350px' }}>
+                  <div className="grid grid-cols-3 gap-3" style={{ minHeight: '45vh' }}>
                     <ViewerPanel
                       volume={volume}
                       viewType="axial"
@@ -380,5 +382,6 @@ export default function Home() {
       <Footer />
       <FeedbackButton />
     </div>
+    </ErrorBoundary>
   );
 }

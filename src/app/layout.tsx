@@ -28,9 +28,26 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'BrainAxis',
+    applicationCategory: 'HealthApplication',
+    operatingSystem: 'Web Browser',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    description: 'Free web-based brain DICOM AC-PC alignment tool. No install required.',
+    url: 'https://brainaxis.vercel.app',
+  };
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
