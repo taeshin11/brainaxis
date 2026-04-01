@@ -11,6 +11,7 @@ import FeedbackButton from '@/components/FeedbackButton';
 import { parseDicomFile, buildVolume, DicomVolume } from '@/lib/dicom';
 import { Point3D, computeACPCAlignment, buildRotationMatrix, resliceVolume } from '@/lib/alignment';
 import { exportPngSnapshots, exportDicomZip } from '@/lib/export';
+import DicomTagEditor from '@/components/DicomTagEditor';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import { _post } from '@/utils/analytics';
 import { useI18n } from '@/lib/i18n-context';
@@ -42,6 +43,8 @@ export default function Home() {
 
   const [crosshairPosition, setCrosshairPosition] = useState({ x: 0, y: 0, z: 0 });
   const [statusMessage, setStatusMessage] = useState('');
+  const [rawBuffers, setRawBuffers] = useState<ArrayBuffer[]>([]);
+  const [showTagEditor, setShowTagEditor] = useState(false);
 
   // Mobile tab state
   const [activeTab, setActiveTab] = useState<'axial' | 'sagittal' | 'coronal'>('axial');
@@ -49,6 +52,7 @@ export default function Home() {
 
   const handleFilesLoaded = useCallback(async (buffers: ArrayBuffer[]) => {
     setIsLoading(true);
+    setRawBuffers(buffers);
     setProgress({ current: 0, total: buffers.length });
 
     try {
@@ -168,6 +172,7 @@ export default function Home() {
   const handleUploadNew = useCallback(() => {
     setVolume(null);
     setOriginalVolume(null);
+    setRawBuffers([]);
     setAcPoint(null);
     setPcPoint(null);
     setPitchDeg(0);
@@ -290,6 +295,7 @@ export default function Home() {
                   onYawChange={(v) => { setYawDeg(v); handleManualRotation(pitchDeg, rollDeg, v); }}
                   onExportDicom={handleExportDicom}
                   onExportPng={handleExportPng}
+                  onOpenTagEditor={() => setShowTagEditor(true)}
                   isAligned={isAligned}
                   isAligning={isAligning}
                   windowCenter={windowCenter}
@@ -374,6 +380,7 @@ export default function Home() {
                         onYawChange={(v) => { setYawDeg(v); handleManualRotation(pitchDeg, rollDeg, v); }}
                         onExportDicom={handleExportDicom}
                         onExportPng={handleExportPng}
+                  onOpenTagEditor={() => setShowTagEditor(true)}
                         isAligned={isAligned}
                         isAligning={isAligning}
                         windowCenter={windowCenter}
@@ -392,6 +399,12 @@ export default function Home() {
 
       <Footer />
       <FeedbackButton />
+      {showTagEditor && rawBuffers.length > 0 && (
+        <DicomTagEditor
+          rawBuffers={rawBuffers}
+          onClose={() => setShowTagEditor(false)}
+        />
+      )}
     </div>
     </ErrorBoundary>
   );

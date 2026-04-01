@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import * as Slider from '@radix-ui/react-slider';
-import { Crosshair, RotateCcw, Compass, Download, ChevronDown } from 'lucide-react';
+import { Crosshair, RotateCcw, Compass, Download, ChevronDown, FileText } from 'lucide-react';
 import { Point3D } from '@/lib/alignment';
 import { useState } from 'react';
 import { useI18n } from '@/lib/i18n-context';
@@ -22,6 +22,7 @@ interface ControlPanelProps {
   onYawChange: (v: number) => void;
   onExportDicom: () => void;
   onExportPng: () => void;
+  onOpenTagEditor: () => void;
   isAligned: boolean;
   isAligning: boolean;
   windowCenter: number;
@@ -94,6 +95,7 @@ export default function ControlPanel({
   onYawChange,
   onExportDicom,
   onExportPng,
+  onOpenTagEditor,
   isAligned,
   isAligning,
   windowCenter,
@@ -238,6 +240,17 @@ export default function ControlPanel({
             </button>
           </motion.div>
         )}
+      </section>
+
+      {/* DICOM Tags */}
+      <section>
+        <button
+          onClick={onOpenTagEditor}
+          className="w-full flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-lg text-sm font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition-all duration-200"
+        >
+          <FileText className="w-4 h-4 text-indigo-500" />
+          {t('controls.dicomTags')}
+        </button>
       </section>
     </motion.div>
   );
