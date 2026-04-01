@@ -1,14 +1,14 @@
 {
-  "totalStructures": 62,
+  "totalStructures": 108,
   "voxelSpacing": [
-    3.0,
-    3.0,
-    3.0
+    1.5,
+    1.5,
+    1.5
   ],
   "dimensions": [
-    122,
-    101,
-    112
+    311,
+    311,
+    431
   ],
   "structures": [
     {
@@ -21,22 +21,22 @@
       "category": "organ",
       "color": "#EF4444",
       "bestSlice": {
-        "axial": 77,
-        "sagittal": 105,
-        "coronal": 49
+        "axial": 231,
+        "sagittal": 134,
+        "coronal": 143
       },
       "sliceRange": {
         "axial": [
-          75,
-          82
+          215,
+          244
         ],
         "sagittal": [
-          94,
-          109
+          126,
+          140
         ],
         "coronal": [
-          39,
-          51
+          124,
+          147
         ]
       }
     },
@@ -50,22 +50,22 @@
       "category": "organ",
       "color": "#EF4444",
       "bestSlice": {
-        "axial": 51,
-        "sagittal": 103,
-        "coronal": 47
+        "axial": 227,
+        "sagittal": 177,
+        "coronal": 140
       },
       "sliceRange": {
         "axial": [
-          48,
-          56
+          215,
+          236
         ],
         "sagittal": [
-          95,
-          106
+          172,
+          187
         ],
         "coronal": [
-          36,
-          51
+          119,
+          144
         ]
       }
     },
@@ -79,27 +79,56 @@
       "category": "vessel",
       "color": "#3B82F6",
       "bestSlice": {
-        "axial": 67,
-        "sagittal": 111,
-        "coronal": 53
+        "axial": 369,
+        "sagittal": 152,
+        "coronal": 129
       },
       "sliceRange": {
         "axial": [
-          63,
-          71
+          148,
+          382
         ],
         "sagittal": [
-          61,
-          111
+          133,
+          171
         ],
         "coronal": [
-          40,
-          57
+          118,
+          176
         ]
       }
     },
     {
       "id": 3,
+      "name": "atrial_appendage_left",
+      "displayName": {
+        "en": "Atrial Appendage Left",
+        "ko": "Atrial Appendage Left"
+      },
+      "category": "organ",
+      "color": "#EF4444",
+      "bestSlice": {
+        "axial": 337,
+        "sagittal": 133,
+        "coronal": 155
+      },
+      "sliceRange": {
+        "axial": [
+          325,
+          342
+        ],
+        "sagittal": [
+          125,
+          143
+        ],
+        "coronal": [
+          148,
+          167
+        ]
+      }
+    },
+    {
+      "id": 4,
       "name": "autochthon_left",
       "displayName": {
         "en": "Autochthon Left",
@@ -108,27 +137,27 @@
       "category": "muscle",
       "color": "#D97706",
       "bestSlice": {
-        "axial": 71,
-        "sagittal": 83,
-        "coronal": 18
+        "axial": 201,
+        "sagittal": 136,
+        "coronal": 79
       },
       "sliceRange": {
         "axial": [
-          64,
-          91
+          91,
+          430
         ],
         "sagittal": [
-          37,
-          111
+          95,
+          150
         ],
         "coronal": [
-          11,
-          32
+          66,
+          119
         ]
       }
     },
     {
-      "id": 4,
+      "id": 5,
       "name": "autochthon_right",
       "displayName": {
         "en": "Autochthon Right",
@@ -137,27 +166,172 @@
       "category": "muscle",
       "color": "#D97706",
       "bestSlice": {
-        "axial": 53,
-        "sagittal": 83,
-        "coronal": 20
+        "axial": 224,
+        "sagittal": 162,
+        "coronal": 79
       },
       "sliceRange": {
         "axial": [
-          33,
-          60
+          89,
+          430
         ],
         "sagittal": [
-          36,
-          111
+          151,
+          214
         ],
         "coronal": [
-          12,
-          33
+          61,
+          119
         ]
       }
     },
     {
-      "id": 5,
+      "id": 6,
+      "name": "brachiocephalic_trunk",
+      "displayName": {
+        "en": "Brachiocephalic Trunk",
+        "ko": "완두동맥간"
+      },
+      "category": "vessel",
+      "color": "#3B82F6",
+      "bestSlice": {
+        "axial": 384,
+        "sagittal": 156,
+        "coronal": 157
+      },
+      "sliceRange": {
+        "axial": [
+          382,
+          409
+        ],
+        "sagittal": [
+          149,
+          163
+        ],
+        "coronal": [
+          153,
+          162
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "name": "brachiocephalic_vein_left",
+      "displayName": {
+        "en": "Brachiocephalic Vein Left",
+        "ko": "Brachiocephalic Vein Left"
+      },
+      "category": "vessel",
+      "color": "#3B82F6",
+      "bestSlice": {
+        "axial": 389,
+        "sagittal": 163,
+        "coronal": 164
+      },
+      "sliceRange": {
+        "axial": [
+          374,
+          408
+        ],
+        "sagittal": [
+          128,
+          169
+        ],
+        "coronal": [
+          153,
+          171
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "name": "brachiocephalic_vein_right",
+      "displayName": {
+        "en": "Brachiocephalic Vein Right",
+        "ko": "Brachiocephalic Vein Right"
+      },
+      "category": "vessel",
+      "color": "#3B82F6",
+      "bestSlice": {
+        "axial": 402,
+        "sagittal": 169,
+        "coronal": 156
+      },
+      "sliceRange": {
+        "axial": [
+          380,
+          410
+        ],
+        "sagittal": [
+          165,
+          173
+        ],
+        "coronal": [
+          151,
+          160
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "name": "clavicula_left",
+      "displayName": {
+        "en": "Clavicula Left",
+        "ko": "Clavicula Left"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 423,
+        "sagittal": 132,
+        "coronal": 165
+      },
+      "sliceRange": {
+        "axial": [
+          397,
+          429
+        ],
+        "sagittal": [
+          60,
+          140
+        ],
+        "coronal": [
+          106,
+          176
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "name": "clavicula_right",
+      "displayName": {
+        "en": "Clavicula Right",
+        "ko": "Clavicula Right"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 427,
+        "sagittal": 171,
+        "coronal": 164
+      },
+      "sliceRange": {
+        "axial": [
+          399,
+          430
+        ],
+        "sagittal": [
+          161,
+          239
+        ],
+        "coronal": [
+          103,
+          176
+        ]
+      }
+    },
+    {
+      "id": 11,
       "name": "colon",
       "displayName": {
         "en": "Colon",
@@ -166,27 +340,85 @@
       "category": "organ",
       "color": "#EF4444",
       "bestSlice": {
-        "axial": 98,
-        "sagittal": 68,
-        "coronal": 72
+        "axial": 178,
+        "sagittal": 152,
+        "coronal": 206
       },
       "sliceRange": {
         "axial": [
-          18,
-          108
+          34,
+          253
         ],
         "sagittal": [
-          2,
-          111
+          73,
+          228
         ],
         "coronal": [
-          22,
-          85
+          81,
+          226
         ]
       }
     },
     {
-      "id": 6,
+      "id": 12,
+      "name": "common_carotid_artery_left",
+      "displayName": {
+        "en": "Common Carotid Artery Left",
+        "ko": "Common Carotid Artery Left"
+      },
+      "category": "vessel",
+      "color": "#3B82F6",
+      "bestSlice": {
+        "axial": 383,
+        "sagittal": 143,
+        "coronal": 153
+      },
+      "sliceRange": {
+        "axial": [
+          381,
+          430
+        ],
+        "sagittal": [
+          131,
+          149
+        ],
+        "coronal": [
+          150,
+          156
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "name": "common_carotid_artery_right",
+      "displayName": {
+        "en": "Common Carotid Artery Right",
+        "ko": "Common Carotid Artery Right"
+      },
+      "category": "vessel",
+      "color": "#3B82F6",
+      "bestSlice": {
+        "axial": 411,
+        "sagittal": 162,
+        "coronal": 157
+      },
+      "sliceRange": {
+        "axial": [
+          409,
+          430
+        ],
+        "sagittal": [
+          158,
+          166
+        ],
+        "coronal": [
+          154,
+          160
+        ]
+      }
+    },
+    {
+      "id": 14,
       "name": "costal_cartilages",
       "displayName": {
         "en": "Costal Cartilages",
@@ -195,27 +427,27 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 104,
-        "sagittal": 104,
-        "coronal": 83
+        "axial": 316,
+        "sagittal": 132,
+        "coronal": 208
       },
       "sliceRange": {
         "axial": [
-          15,
-          112
+          195,
+          403
         ],
         "sagittal": [
-          83,
-          111
+          63,
+          249
         ],
         "coronal": [
-          37,
-          85
+          126,
+          219
         ]
       }
     },
     {
-      "id": 7,
+      "id": 15,
       "name": "duodenum",
       "displayName": {
         "en": "Duodenum",
@@ -224,27 +456,56 @@
       "category": "organ",
       "color": "#EF4444",
       "bestSlice": {
-        "axial": 51,
-        "sagittal": 78,
-        "coronal": 58
+        "axial": 180,
+        "sagittal": 184,
+        "coronal": 156
       },
       "sliceRange": {
         "axial": [
-          43,
-          77
+          164,
+          225
         ],
         "sagittal": [
-          70,
-          95
+          134,
+          197
         ],
         "coronal": [
-          53,
-          73
+          149,
+          184
         ]
       }
     },
     {
-      "id": 8,
+      "id": 16,
+      "name": "esophagus",
+      "displayName": {
+        "en": "Esophagus",
+        "ko": "식도"
+      },
+      "category": "organ",
+      "color": "#EF4444",
+      "bestSlice": {
+        "axial": 270,
+        "sagittal": 150,
+        "coronal": 132
+      },
+      "sliceRange": {
+        "axial": [
+          264,
+          426
+        ],
+        "sagittal": [
+          141,
+          160
+        ],
+        "coronal": [
+          127,
+          155
+        ]
+      }
+    },
+    {
+      "id": 17,
       "name": "femur_left",
       "displayName": {
         "en": "Femur Left",
@@ -253,27 +514,27 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 92,
-        "sagittal": 7,
-        "coronal": 41
+        "axial": 36,
+        "sagittal": 84,
+        "coronal": 125
       },
       "sliceRange": {
         "axial": [
-          82,
-          110
+          0,
+          61
         ],
         "sagittal": [
-          0,
-          19
+          58,
+          110
         ],
         "coronal": [
-          27,
-          52
+          100,
+          146
         ]
       }
     },
     {
-      "id": 9,
+      "id": 18,
       "name": "femur_right",
       "displayName": {
         "en": "Femur Right",
@@ -282,27 +543,27 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 32,
-        "sagittal": 7,
-        "coronal": 43
+        "axial": 39,
+        "sagittal": 233,
+        "coronal": 125
       },
       "sliceRange": {
         "axial": [
-          11,
-          42
+          0,
+          61
         ],
         "sagittal": [
-          0,
-          17
+          192,
+          248
         ],
         "coronal": [
-          31,
-          52
+          101,
+          146
         ]
       }
     },
     {
-      "id": 10,
+      "id": 19,
       "name": "gallbladder",
       "displayName": {
         "en": "Gallbladder",
@@ -311,27 +572,27 @@
       "category": "organ",
       "color": "#EF4444",
       "bestSlice": {
-        "axial": 40,
-        "sagittal": 89,
-        "coronal": 67
+        "axial": 206,
+        "sagittal": 194,
+        "coronal": 190
       },
       "sliceRange": {
         "axial": [
-          34,
-          46
+          196,
+          226
         ],
         "sagittal": [
-          84,
-          95
+          185,
+          211
         ],
         "coronal": [
-          58,
-          75
+          164,
+          203
         ]
       }
     },
     {
-      "id": 11,
+      "id": 20,
       "name": "gluteus_maximus_left",
       "displayName": {
         "en": "Gluteus Maximus Left",
@@ -340,27 +601,27 @@
       "category": "muscle",
       "color": "#D97706",
       "bestSlice": {
-        "axial": 88,
-        "sagittal": 19,
-        "coronal": 21
+        "axial": 57,
+        "sagittal": 86,
+        "coronal": 84
       },
       "sliceRange": {
         "axial": [
-          67,
-          116
+          0,
+          118
         ],
         "sagittal": [
-          0,
-          47
+          40,
+          137
         ],
         "coronal": [
-          12,
-          34
+          60,
+          120
         ]
       }
     },
     {
-      "id": 12,
+      "id": 21,
       "name": "gluteus_maximus_right",
       "displayName": {
         "en": "Gluteus Maximus Right",
@@ -369,27 +630,27 @@
       "category": "muscle",
       "color": "#D97706",
       "bestSlice": {
-        "axial": 31,
-        "sagittal": 20,
-        "coronal": 23
+        "axial": 58,
+        "sagittal": 225,
+        "coronal": 83
       },
       "sliceRange": {
         "axial": [
-          8,
-          56
+          0,
+          121
         ],
         "sagittal": [
-          0,
-          48
+          163,
+          264
         ],
         "coronal": [
-          12,
-          36
+          57,
+          127
         ]
       }
     },
     {
-      "id": 13,
+      "id": 22,
       "name": "gluteus_medius_left",
       "displayName": {
         "en": "Gluteus Medius Left",
@@ -398,27 +659,27 @@
       "category": "muscle",
       "color": "#D97706",
       "bestSlice": {
-        "axial": 107,
-        "sagittal": 24,
-        "coronal": 34
+        "axial": 74,
+        "sagittal": 67,
+        "coronal": 110
       },
       "sliceRange": {
         "axial": [
-          85,
-          114
+          42,
+          132
         ],
         "sagittal": [
-          12,
-          56
+          47,
+          113
         ],
         "coronal": [
-          23,
-          55
+          89,
+          160
         ]
       }
     },
     {
-      "id": 14,
+      "id": 23,
       "name": "gluteus_medius_right",
       "displayName": {
         "en": "Gluteus Medius Right",
@@ -427,27 +688,27 @@
       "category": "muscle",
       "color": "#D97706",
       "bestSlice": {
-        "axial": 16,
-        "sagittal": 32,
-        "coronal": 36
+        "axial": 82,
+        "sagittal": 238,
+        "coronal": 113
       },
       "sliceRange": {
         "axial": [
-          10,
-          38
+          38,
+          134
         ],
         "sagittal": [
-          9,
-          57
+          187,
+          258
         ],
         "coronal": [
-          24,
-          56
+          88,
+          157
         ]
       }
     },
     {
-      "id": 15,
+      "id": 24,
       "name": "gluteus_minimus_left",
       "displayName": {
         "en": "Gluteus Minimus Left",
@@ -456,27 +717,27 @@
       "category": "muscle",
       "color": "#D97706",
       "bestSlice": {
-        "axial": 102,
-        "sagittal": 32,
-        "coronal": 42
+        "axial": 86,
+        "sagittal": 80,
+        "coronal": 122
       },
       "sliceRange": {
         "axial": [
-          91,
-          107
+          43,
+          100
         ],
         "sagittal": [
-          12,
-          39
+          68,
+          98
         ],
         "coronal": [
-          32,
-          58
+          105,
+          163
         ]
       }
     },
     {
-      "id": 16,
+      "id": 25,
       "name": "gluteus_minimus_right",
       "displayName": {
         "en": "Gluteus Minimus Right",
@@ -485,27 +746,56 @@
       "category": "muscle",
       "color": "#D97706",
       "bestSlice": {
-        "axial": 22,
-        "sagittal": 24,
-        "coronal": 43
+        "axial": 82,
+        "sagittal": 225,
+        "coronal": 127
       },
       "sliceRange": {
         "axial": [
-          18,
-          32
+          46,
+          105
         ],
         "sagittal": [
-          11,
-          43
+          203,
+          237
         ],
         "coronal": [
-          34,
-          59
+          105,
+          159
         ]
       }
     },
     {
-      "id": 17,
+      "id": 26,
+      "name": "heart",
+      "displayName": {
+        "en": "Heart",
+        "ko": "심장"
+      },
+      "category": "organ",
+      "color": "#EF4444",
+      "bestSlice": {
+        "axial": 301,
+        "sagittal": 143,
+        "coronal": 173
+      },
+      "sliceRange": {
+        "axial": [
+          279,
+          362
+        ],
+        "sagittal": [
+          109,
+          187
+        ],
+        "coronal": [
+          129,
+          199
+        ]
+      }
+    },
+    {
+      "id": 27,
       "name": "hip_left",
       "displayName": {
         "en": "Hip Left",
@@ -514,27 +804,27 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 83,
-        "sagittal": 19,
-        "coronal": 35
+        "axial": 63,
+        "sagittal": 112,
+        "coronal": 111
       },
       "sliceRange": {
         "axial": [
-          63,
-          109
+          3,
+          139
         ],
         "sagittal": [
-          0,
-          60
+          64,
+          151
         ],
         "coronal": [
-          15,
-          63
+          76,
+          170
         ]
       }
     },
     {
-      "id": 18,
+      "id": 28,
       "name": "hip_right",
       "displayName": {
         "en": "Hip Right",
@@ -543,27 +833,85 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 40,
-        "sagittal": 18,
-        "coronal": 36
+        "axial": 62,
+        "sagittal": 189,
+        "coronal": 111
       },
       "sliceRange": {
         "axial": [
-          15,
-          62
+          1,
+          140
         ],
         "sagittal": [
-          0,
-          60
+          152,
+          239
         ],
         "coronal": [
-          15,
-          65
+          75,
+          167
         ]
       }
     },
     {
-      "id": 19,
+      "id": 29,
+      "name": "humerus_left",
+      "displayName": {
+        "en": "Humerus Left",
+        "ko": "Humerus Left"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 412,
+        "sagittal": 45,
+        "coronal": 136
+      },
+      "sliceRange": {
+        "axial": [
+          395,
+          430
+        ],
+        "sagittal": [
+          26,
+          62
+        ],
+        "coronal": [
+          115,
+          155
+        ]
+      }
+    },
+    {
+      "id": 30,
+      "name": "humerus_right",
+      "displayName": {
+        "en": "Humerus Right",
+        "ko": "Humerus Right"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 420,
+        "sagittal": 253,
+        "coronal": 128
+      },
+      "sliceRange": {
+        "axial": [
+          403,
+          430
+        ],
+        "sagittal": [
+          236,
+          266
+        ],
+        "coronal": [
+          114,
+          150
+        ]
+      }
+    },
+    {
+      "id": 31,
       "name": "iliac_artery_left",
       "displayName": {
         "en": "Iliac Artery Left",
@@ -572,27 +920,27 @@
       "category": "vessel",
       "color": "#3B82F6",
       "bestSlice": {
-        "axial": 78,
-        "sagittal": 25,
-        "coronal": 61
+        "axial": 130,
+        "sagittal": 108,
+        "coronal": 145
       },
       "sliceRange": {
         "axial": [
-          67,
-          89
+          29,
+          149
         ],
         "sagittal": [
-          5,
-          60
+          104,
+          152
         ],
         "coronal": [
-          42,
-          63
+          139,
+          168
         ]
       }
     },
     {
-      "id": 20,
+      "id": 32,
       "name": "iliac_artery_right",
       "displayName": {
         "en": "Iliac Artery Right",
@@ -601,27 +949,27 @@
       "category": "vessel",
       "color": "#3B82F6",
       "bestSlice": {
-        "axial": 38,
-        "sagittal": 28,
-        "coronal": 62
+        "axial": 120,
+        "sagittal": 160,
+        "coronal": 147
       },
       "sliceRange": {
         "axial": [
-          36,
-          66
+          32,
+          147
         ],
         "sagittal": [
-          0,
-          60
+          152,
+          202
         ],
         "coronal": [
-          44,
-          64
+          141,
+          168
         ]
       }
     },
     {
-      "id": 21,
+      "id": 33,
       "name": "iliac_vena_left",
       "displayName": {
         "en": "Iliac Vena Left",
@@ -630,27 +978,27 @@
       "category": "vessel",
       "color": "#3B82F6",
       "bestSlice": {
-        "axial": 79,
-        "sagittal": 44,
-        "coronal": 42
+        "axial": 123,
+        "sagittal": 117,
+        "coronal": 142
       },
       "sliceRange": {
         "axial": [
-          61,
-          86
+          31,
+          141
         ],
         "sagittal": [
-          3,
-          57
+          109,
+          162
         ],
         "coronal": [
-          38,
-          62
+          125,
+          168
         ]
       }
     },
     {
-      "id": 22,
+      "id": 34,
       "name": "iliac_vena_right",
       "displayName": {
         "en": "Iliac Vena Right",
@@ -659,27 +1007,27 @@
       "category": "vessel",
       "color": "#3B82F6",
       "bestSlice": {
-        "axial": 42,
-        "sagittal": 46,
-        "coronal": 45
+        "axial": 123,
+        "sagittal": 171,
+        "coronal": 139
       },
       "sliceRange": {
         "axial": [
-          38,
-          60
+          30,
+          138
         ],
         "sagittal": [
-          2,
-          56
+          162,
+          196
         ],
         "coronal": [
-          41,
-          62
+          128,
+          167
         ]
       }
     },
     {
-      "id": 23,
+      "id": 35,
       "name": "iliopsoas_left",
       "displayName": {
         "en": "Iliopsoas Left",
@@ -688,27 +1036,27 @@
       "category": "muscle",
       "color": "#D97706",
       "bestSlice": {
-        "axial": 75,
-        "sagittal": 38,
-        "coronal": 44
+        "axial": 102,
+        "sagittal": 117,
+        "coronal": 135
       },
       "sliceRange": {
         "axial": [
-          72,
-          102
+          25,
+          230
         ],
         "sagittal": [
-          0,
-          94
+          79,
+          142
         ],
         "coronal": [
-          31,
-          64
+          101,
+          175
         ]
       }
     },
     {
-      "id": 24,
+      "id": 36,
       "name": "iliopsoas_right",
       "displayName": {
         "en": "Iliopsoas Right",
@@ -717,27 +1065,27 @@
       "category": "muscle",
       "color": "#D97706",
       "bestSlice": {
-        "axial": 50,
-        "sagittal": 39,
-        "coronal": 46
+        "axial": 108,
+        "sagittal": 187,
+        "coronal": 129
       },
       "sliceRange": {
         "axial": [
           24,
-          55
+          229
         ],
         "sagittal": [
-          0,
-          98
+          170,
+          226
         ],
         "coronal": [
-          32,
-          64
+          98,
+          172
         ]
       }
     },
     {
-      "id": 25,
+      "id": 37,
       "name": "inferior_vena_cava",
       "displayName": {
         "en": "Inferior Vena Cava",
@@ -746,27 +1094,27 @@
       "category": "vessel",
       "color": "#3B82F6",
       "bestSlice": {
-        "axial": 58,
-        "sagittal": 92,
-        "coronal": 53
+        "axial": 214,
+        "sagittal": 170,
+        "coronal": 149
       },
       "sliceRange": {
         "axial": [
-          51,
-          63
+          136,
+          310
         ],
         "sagittal": [
-          58,
-          111
+          159,
+          182
         ],
         "coronal": [
-          48,
-          57
+          138,
+          160
         ]
       }
     },
     {
-      "id": 26,
+      "id": 38,
       "name": "kidney_left",
       "displayName": {
         "en": "Left Kidney",
@@ -775,27 +1123,27 @@
       "category": "organ",
       "color": "#EF4444",
       "bestSlice": {
-        "axial": 91,
-        "sagittal": 91,
-        "coronal": 39
+        "axial": 221,
+        "sagittal": 103,
+        "coronal": 125
       },
       "sliceRange": {
         "axial": [
-          77,
-          98
+          172,
+          242
         ],
         "sagittal": [
-          72,
-          104
+          84,
+          134
         ],
         "coronal": [
-          27,
-          50
+          101,
+          142
         ]
       }
     },
     {
-      "id": 27,
+      "id": 39,
       "name": "kidney_right",
       "displayName": {
         "en": "Right Kidney",
@@ -804,27 +1152,27 @@
       "category": "organ",
       "color": "#EF4444",
       "bestSlice": {
-        "axial": 37,
-        "sagittal": 76,
-        "coronal": 38
+        "axial": 200,
+        "sagittal": 202,
+        "coronal": 130
       },
       "sliceRange": {
         "axial": [
-          28,
-          51
+          158,
+          222
         ],
         "sagittal": [
-          66,
-          101
+          176,
+          223
         ],
         "coronal": [
-          29,
-          54
+          106,
+          156
         ]
       }
     },
     {
-      "id": 28,
+      "id": 40,
       "name": "liver",
       "displayName": {
         "en": "Liver",
@@ -833,27 +1181,27 @@
       "category": "organ",
       "color": "#EF4444",
       "bestSlice": {
-        "axial": 27,
-        "sagittal": 107,
-        "coronal": 54
+        "axial": 251,
+        "sagittal": 221,
+        "coronal": 168
       },
       "sliceRange": {
         "axial": [
-          17,
-          84
+          160,
+          292
         ],
         "sagittal": [
-          69,
-          111
+          100,
+          249
         ],
         "coronal": [
-          25,
-          86
+          96,
+          221
         ]
       }
     },
     {
-      "id": 29,
+      "id": 41,
       "name": "lung_lower_lobe_left",
       "displayName": {
         "en": "Left Lower Lobe",
@@ -862,27 +1210,27 @@
       "category": "organ",
       "color": "#EF4444",
       "bestSlice": {
-        "axial": 110,
-        "sagittal": 111,
-        "coronal": 20
+        "axial": 282,
+        "sagittal": 109,
+        "coronal": 111
       },
       "sliceRange": {
         "axial": [
-          71,
-          111
+          235,
+          381
         ],
         "sagittal": [
-          103,
-          111
+          62,
+          148
         ],
         "coronal": [
-          17,
-          66
+          80,
+          199
         ]
       }
     },
     {
-      "id": 30,
+      "id": 42,
       "name": "lung_lower_lobe_right",
       "displayName": {
         "en": "Right Lower Lobe",
@@ -891,27 +1239,27 @@
       "category": "organ",
       "color": "#EF4444",
       "bestSlice": {
-        "axial": 18,
-        "sagittal": 111,
-        "coronal": 25
+        "axial": 295,
+        "sagittal": 192,
+        "coronal": 102
       },
       "sliceRange": {
         "axial": [
-          16,
-          59
+          222,
+          366
         ],
         "sagittal": [
-          102,
-          111
+          154,
+          250
         ],
         "coronal": [
-          19,
-          77
+          78,
+          191
         ]
       }
     },
     {
-      "id": 31,
+      "id": 43,
       "name": "lung_middle_lobe_right",
       "displayName": {
         "en": "Right Middle Lobe",
@@ -920,27 +1268,27 @@
       "category": "organ",
       "color": "#EF4444",
       "bestSlice": {
-        "axial": 31,
-        "sagittal": 111,
-        "coronal": 78
+        "axial": 331,
+        "sagittal": 198,
+        "coronal": 192
       },
       "sliceRange": {
         "axial": [
-          29,
-          31
+          274,
+          342
         ],
         "sagittal": [
-          111,
-          111
+          158,
+          240
         ],
         "coronal": [
-          77,
-          79
+          130,
+          204
         ]
       }
     },
     {
-      "id": 32,
+      "id": 44,
       "name": "lung_upper_lobe_left",
       "displayName": {
         "en": "Left Upper Lobe",
@@ -949,27 +1297,56 @@
       "category": "organ",
       "color": "#EF4444",
       "bestSlice": {
-        "axial": 106,
-        "sagittal": 111,
-        "coronal": 68
+        "axial": 364,
+        "sagittal": 104,
+        "coronal": 156
       },
       "sliceRange": {
         "axial": [
-          104,
-          110
+          262,
+          418
         ],
         "sagittal": [
-          101,
-          111
+          69,
+          157
         ],
         "coronal": [
-          63,
-          71
+          100,
+          209
         ]
       }
     },
     {
-      "id": 33,
+      "id": 45,
+      "name": "lung_upper_lobe_right",
+      "displayName": {
+        "en": "Right Upper Lobe",
+        "ko": "우폐 상엽"
+      },
+      "category": "organ",
+      "color": "#EF4444",
+      "bestSlice": {
+        "axial": 362,
+        "sagittal": 188,
+        "coronal": 131
+      },
+      "sliceRange": {
+        "axial": [
+          332,
+          422
+        ],
+        "sagittal": [
+          150,
+          237
+        ],
+        "coronal": [
+          88,
+          200
+        ]
+      }
+    },
+    {
+      "id": 46,
       "name": "pancreas",
       "displayName": {
         "en": "Pancreas",
@@ -978,27 +1355,27 @@
       "category": "organ",
       "color": "#EF4444",
       "bestSlice": {
-        "axial": 58,
-        "sagittal": 96,
-        "coronal": 61
+        "axial": 225,
+        "sagittal": 162,
+        "coronal": 164
       },
       "sliceRange": {
         "axial": [
-          53,
-          90
+          180,
+          240
         ],
         "sagittal": [
-          80,
-          100
+          88,
+          187
         ],
         "coronal": [
-          48,
-          67
+          129,
+          183
         ]
       }
     },
     {
-      "id": 34,
+      "id": 47,
       "name": "portal_vein_and_splenic_vein",
       "displayName": {
         "en": "Portal & Splenic Vein",
@@ -1007,27 +1384,27 @@
       "category": "vessel",
       "color": "#3B82F6",
       "bestSlice": {
-        "axial": 64,
-        "sagittal": 100,
-        "coronal": 61
+        "axial": 231,
+        "sagittal": 176,
+        "coronal": 163
       },
       "sliceRange": {
         "axial": [
-          40,
-          100
+          214,
+          250
         ],
         "sagittal": [
-          89,
-          106
+          94,
+          207
         ],
         "coronal": [
-          41,
-          74
+          131,
+          195
         ]
       }
     },
     {
-      "id": 35,
+      "id": 48,
       "name": "prostate",
       "displayName": {
         "en": "Prostate",
@@ -1036,27 +1413,85 @@
       "category": "organ",
       "color": "#EF4444",
       "bestSlice": {
-        "axial": 64,
-        "sagittal": 2,
-        "coronal": 40
+        "axial": 33,
+        "sagittal": 152,
+        "coronal": 117
       },
       "sliceRange": {
         "axial": [
-          56,
-          68
+          24,
+          46
         ],
         "sagittal": [
-          0,
-          7
+          139,
+          165
         ],
         "coronal": [
-          36,
-          46
+          110,
+          132
         ]
       }
     },
     {
-      "id": 36,
+      "id": 49,
+      "name": "pulmonary_vein",
+      "displayName": {
+        "en": "Pulmonary Vein",
+        "ko": "폐정맥"
+      },
+      "category": "vessel",
+      "color": "#3B82F6",
+      "bestSlice": {
+        "axial": 336,
+        "sagittal": 131,
+        "coronal": 148
+      },
+      "sliceRange": {
+        "axial": [
+          306,
+          346
+        ],
+        "sagittal": [
+          119,
+          195
+        ],
+        "coronal": [
+          121,
+          158
+        ]
+      }
+    },
+    {
+      "id": 50,
+      "name": "rib_left_1",
+      "displayName": {
+        "en": "Rib Left 1",
+        "ko": "Rib Left 1"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 399,
+        "sagittal": 114,
+        "coronal": 136
+      },
+      "sliceRange": {
+        "axial": [
+          386,
+          430
+        ],
+        "sagittal": [
+          102,
+          131
+        ],
+        "coronal": [
+          129,
+          183
+        ]
+      }
+    },
+    {
+      "id": 51,
       "name": "rib_left_10",
       "displayName": {
         "en": "Rib Left 10",
@@ -1065,27 +1500,27 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 112,
-        "sagittal": 100,
-        "coronal": 46
+        "axial": 289,
+        "sagittal": 63,
+        "coronal": 81
       },
       "sliceRange": {
         "axial": [
-          100,
-          113
+          209,
+          294
         ],
         "sagittal": [
-          89,
-          111
+          61,
+          134
         ],
         "coronal": [
-          21,
-          50
+          77,
+          162
         ]
       }
     },
     {
-      "id": 37,
+      "id": 52,
       "name": "rib_left_11",
       "displayName": {
         "en": "Rib Left 11",
@@ -1094,27 +1529,27 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 106,
-        "sagittal": 111,
-        "coronal": 16
+        "axial": 266,
+        "sagittal": 71,
+        "coronal": 85
       },
       "sliceRange": {
         "axial": [
-          83,
-          108
+          197,
+          274
         ],
         "sagittal": [
-          83,
-          111
+          66,
+          133
         ],
         "coronal": [
-          14,
-          36
+          81,
+          133
         ]
       }
     },
     {
-      "id": 38,
+      "id": 53,
       "name": "rib_left_12",
       "displayName": {
         "en": "Rib Left 12",
@@ -1123,27 +1558,172 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 73,
-        "sagittal": 105,
-        "coronal": 21
+        "axial": 236,
+        "sagittal": 133,
+        "coronal": 92
       },
       "sliceRange": {
         "axial": [
-          73,
-          93
+          202,
+          246
         ],
         "sagittal": [
-          89,
-          109
+          93,
+          133
         ],
         "coronal": [
-          19,
-          25
+          89,
+          98
         ]
       }
     },
     {
-      "id": 39,
+      "id": 54,
+      "name": "rib_left_2",
+      "displayName": {
+        "en": "Rib Left 2",
+        "ko": "Rib Left 2"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 390,
+        "sagittal": 92,
+        "coronal": 118
+      },
+      "sliceRange": {
+        "axial": [
+          375,
+          423
+        ],
+        "sagittal": [
+          84,
+          123
+        ],
+        "coronal": [
+          112,
+          195
+        ]
+      }
+    },
+    {
+      "id": 55,
+      "name": "rib_left_3",
+      "displayName": {
+        "en": "Rib Left 3",
+        "ko": "Rib Left 3"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 366,
+        "sagittal": 77,
+        "coronal": 106
+      },
+      "sliceRange": {
+        "axial": [
+          352,
+          409
+        ],
+        "sagittal": [
+          73,
+          134
+        ],
+        "coronal": [
+          100,
+          203
+        ]
+      }
+    },
+    {
+      "id": 56,
+      "name": "rib_left_4",
+      "displayName": {
+        "en": "Rib Left 4",
+        "ko": "Rib Left 4"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 344,
+        "sagittal": 72,
+        "coronal": 98
+      },
+      "sliceRange": {
+        "axial": [
+          329,
+          393
+        ],
+        "sagittal": [
+          69,
+          124
+        ],
+        "coronal": [
+          93,
+          208
+        ]
+      }
+    },
+    {
+      "id": 57,
+      "name": "rib_left_5",
+      "displayName": {
+        "en": "Rib Left 5",
+        "ko": "Rib Left 5"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 315,
+        "sagittal": 71,
+        "coronal": 93
+      },
+      "sliceRange": {
+        "axial": [
+          304,
+          379
+        ],
+        "sagittal": [
+          67,
+          125
+        ],
+        "coronal": [
+          88,
+          213
+        ]
+      }
+    },
+    {
+      "id": 58,
+      "name": "rib_left_6",
+      "displayName": {
+        "en": "Rib Left 6",
+        "ko": "Rib Left 6"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 293,
+        "sagittal": 66,
+        "coronal": 89
+      },
+      "sliceRange": {
+        "axial": [
+          277,
+          366
+        ],
+        "sagittal": [
+          62,
+          124
+        ],
+        "coronal": [
+          83,
+          213
+        ]
+      }
+    },
+    {
+      "id": 59,
       "name": "rib_left_7",
       "displayName": {
         "en": "Rib Left 7",
@@ -1152,27 +1732,27 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 107,
-        "sagittal": 107,
-        "coronal": 73
+        "axial": 324,
+        "sagittal": 64,
+        "coronal": 84
       },
       "sliceRange": {
         "axial": [
-          104,
-          110
+          256,
+          350
         ],
         "sagittal": [
-          103,
-          111
+          60,
+          127
         ],
         "coronal": [
-          67,
-          76
+          79,
+          207
         ]
       }
     },
     {
-      "id": 40,
+      "id": 60,
       "name": "rib_left_8",
       "displayName": {
         "en": "Rib Left 8",
@@ -1181,27 +1761,27 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 111,
-        "sagittal": 98,
-        "coronal": 64
+        "axial": 312,
+        "sagittal": 63,
+        "coronal": 80
       },
       "sliceRange": {
         "axial": [
-          107,
-          113
+          239,
+          332
         ],
         "sagittal": [
-          95,
-          111
+          60,
+          129
         ],
         "coronal": [
-          52,
-          67
+          76,
+          200
         ]
       }
     },
     {
-      "id": 41,
+      "id": 61,
       "name": "rib_left_9",
       "displayName": {
         "en": "Rib Left 9",
@@ -1210,27 +1790,56 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 112,
-        "sagittal": 92,
-        "coronal": 58
+        "axial": 306,
+        "sagittal": 61,
+        "coronal": 78
       },
       "sliceRange": {
         "axial": [
-          108,
-          114
+          226,
+          313
         ],
         "sagittal": [
-          90,
-          111
+          58,
+          135
         ],
         "coronal": [
-          37,
-          62
+          74,
+          186
         ]
       }
     },
     {
-      "id": 42,
+      "id": 62,
+      "name": "rib_right_1",
+      "displayName": {
+        "en": "Rib Right 1",
+        "ko": "Rib Right 1"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 402,
+        "sagittal": 185,
+        "coronal": 133
+      },
+      "sliceRange": {
+        "axial": [
+          392,
+          430
+        ],
+        "sagittal": [
+          171,
+          196
+        ],
+        "coronal": [
+          125,
+          180
+        ]
+      }
+    },
+    {
+      "id": 63,
       "name": "rib_right_10",
       "displayName": {
         "en": "Rib Right 10",
@@ -1239,27 +1848,27 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 15,
-        "sagittal": 110,
-        "coronal": 29
+        "axial": 289,
+        "sagittal": 250,
+        "coronal": 78
       },
       "sliceRange": {
         "axial": [
-          14,
-          25
+          212,
+          296
         ],
         "sagittal": [
-          88,
-          111
+          172,
+          252
         ],
         "coronal": [
-          23,
-          51
+          74,
+          159
         ]
       }
     },
     {
-      "id": 43,
+      "id": 64,
       "name": "rib_right_11",
       "displayName": {
         "en": "Rib Right 11",
@@ -1268,27 +1877,27 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 21,
-        "sagittal": 109,
-        "coronal": 18
+        "axial": 260,
+        "sagittal": 241,
+        "coronal": 81
       },
       "sliceRange": {
         "axial": [
-          19,
-          40
+          198,
+          268
         ],
         "sagittal": [
-          84,
-          111
+          181,
+          244
         ],
         "coronal": [
-          17,
-          38
+          77,
+          129
         ]
       }
     },
     {
-      "id": 44,
+      "id": 65,
       "name": "rib_right_12",
       "displayName": {
         "en": "Rib Right 12",
@@ -1297,27 +1906,172 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 50,
-        "sagittal": 104,
-        "coronal": 24
+        "axial": 235,
+        "sagittal": 178,
+        "coronal": 89
       },
       "sliceRange": {
         "axial": [
-          33,
-          51
+          202,
+          242
         ],
         "sagittal": [
-          91,
-          107
+          177,
+          214
         ],
         "coronal": [
-          23,
-          26
+          86,
+          94
         ]
       }
     },
     {
-      "id": 45,
+      "id": 66,
+      "name": "rib_right_2",
+      "displayName": {
+        "en": "Rib Right 2",
+        "ko": "Rib Right 2"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 400,
+        "sagittal": 207,
+        "coronal": 116
+      },
+      "sliceRange": {
+        "axial": [
+          378,
+          428
+        ],
+        "sagittal": [
+          170,
+          215
+        ],
+        "coronal": [
+          110,
+          191
+        ]
+      }
+    },
+    {
+      "id": 67,
+      "name": "rib_right_3",
+      "displayName": {
+        "en": "Rib Right 3",
+        "ko": "Rib Right 3"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 372,
+        "sagittal": 225,
+        "coronal": 104
+      },
+      "sliceRange": {
+        "axial": [
+          358,
+          413
+        ],
+        "sagittal": [
+          170,
+          229
+        ],
+        "coronal": [
+          98,
+          199
+        ]
+      }
+    },
+    {
+      "id": 68,
+      "name": "rib_right_4",
+      "displayName": {
+        "en": "Rib Right 4",
+        "ko": "Rib Right 4"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 353,
+        "sagittal": 234,
+        "coronal": 96
+      },
+      "sliceRange": {
+        "axial": [
+          335,
+          397
+        ],
+        "sagittal": [
+          173,
+          238
+        ],
+        "coronal": [
+          89,
+          204
+        ]
+      }
+    },
+    {
+      "id": 69,
+      "name": "rib_right_5",
+      "displayName": {
+        "en": "Rib Right 5",
+        "ko": "Rib Right 5"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 322,
+        "sagittal": 238,
+        "coronal": 90
+      },
+      "sliceRange": {
+        "axial": [
+          311,
+          383
+        ],
+        "sagittal": [
+          175,
+          242
+        ],
+        "coronal": [
+          84,
+          209
+        ]
+      }
+    },
+    {
+      "id": 70,
+      "name": "rib_right_6",
+      "displayName": {
+        "en": "Rib Right 6",
+        "ko": "Rib Right 6"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 360,
+        "sagittal": 241,
+        "coronal": 86
+      },
+      "sliceRange": {
+        "axial": [
+          287,
+          367
+        ],
+        "sagittal": [
+          176,
+          245
+        ],
+        "coronal": [
+          79,
+          207
+        ]
+      }
+    },
+    {
+      "id": 71,
       "name": "rib_right_7",
       "displayName": {
         "en": "Rib Right 7",
@@ -1326,27 +2080,27 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 23,
-        "sagittal": 109,
-        "coronal": 73
+        "axial": 345,
+        "sagittal": 245,
+        "coronal": 81
       },
       "sliceRange": {
         "axial": [
-          21,
-          26
+          262,
+          352
         ],
         "sagittal": [
-          106,
-          111
+          174,
+          249
         ],
         "coronal": [
-          69,
-          76
+          75,
+          201
         ]
       }
     },
     {
-      "id": 46,
+      "id": 72,
       "name": "rib_right_8",
       "displayName": {
         "en": "Rib Right 8",
@@ -1355,27 +2109,27 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 18,
-        "sagittal": 101,
-        "coronal": 64
+        "axial": 327,
+        "sagittal": 248,
+        "coronal": 78
       },
       "sliceRange": {
         "axial": [
-          16,
-          25
+          245,
+          334
         ],
         "sagittal": [
-          100,
-          111
+          170,
+          252
         ],
         "coronal": [
-          55,
-          68
+          73,
+          194
         ]
       }
     },
     {
-      "id": 47,
+      "id": 73,
       "name": "rib_right_9",
       "displayName": {
         "en": "Rib Right 9",
@@ -1384,27 +2138,27 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 15,
-        "sagittal": 96,
-        "coronal": 58
+        "axial": 309,
+        "sagittal": 251,
+        "coronal": 76
       },
       "sliceRange": {
         "axial": [
-          14,
-          20
+          230,
+          316
         ],
         "sagittal": [
-          94,
-          111
+          167,
+          254
         ],
         "coronal": [
-          42,
-          63
+          72,
+          182
         ]
       }
     },
     {
-      "id": 48,
+      "id": 74,
       "name": "sacrum",
       "displayName": {
         "en": "Sacrum",
@@ -1413,27 +2167,114 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 50,
-        "sagittal": 37,
-        "coronal": 16
+        "axial": 99,
+        "sagittal": 141,
+        "coronal": 110
       },
       "sliceRange": {
         "axial": [
-          42,
-          81
+          28,
+          128
         ],
         "sagittal": [
-          9,
-          51
+          113,
+          188
         ],
         "coronal": [
-          11,
-          37
+          63,
+          131
         ]
       }
     },
     {
-      "id": 49,
+      "id": 75,
+      "name": "scapula_left",
+      "displayName": {
+        "en": "Scapula Left",
+        "ko": "Scapula Left"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 394,
+        "sagittal": 58,
+        "coronal": 120
+      },
+      "sliceRange": {
+        "axial": [
+          309,
+          430
+        ],
+        "sagittal": [
+          34,
+          102
+        ],
+        "coronal": [
+          80,
+          142
+        ]
+      }
+    },
+    {
+      "id": 76,
+      "name": "scapula_right",
+      "displayName": {
+        "en": "Scapula Right",
+        "ko": "Scapula Right"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 402,
+        "sagittal": 244,
+        "coronal": 118
+      },
+      "sliceRange": {
+        "axial": [
+          318,
+          430
+        ],
+        "sagittal": [
+          199,
+          267
+        ],
+        "coronal": [
+          77,
+          139
+        ]
+      }
+    },
+    {
+      "id": 77,
+      "name": "skull",
+      "displayName": {
+        "en": "Skull",
+        "ko": "Skull"
+      },
+      "category": "other",
+      "color": "#8B5CF6",
+      "bestSlice": {
+        "axial": 429,
+        "sagittal": 148,
+        "coronal": 177
+      },
+      "sliceRange": {
+        "axial": [
+          18,
+          430
+        ],
+        "sagittal": [
+          146,
+          151
+        ],
+        "coronal": [
+          175,
+          192
+        ]
+      }
+    },
+    {
+      "id": 78,
       "name": "small_bowel",
       "displayName": {
         "en": "Small Bowel",
@@ -1442,27 +2283,27 @@
       "category": "organ",
       "color": "#EF4444",
       "bestSlice": {
-        "axial": 87,
-        "sagittal": 40,
-        "coronal": 59
+        "axial": 140,
+        "sagittal": 129,
+        "coronal": 186
       },
       "sliceRange": {
         "axial": [
-          19,
-          96
+          84,
+          222
         ],
         "sagittal": [
-          30,
-          88
+          73,
+          231
         ],
         "coronal": [
-          46,
-          75
+          136,
+          214
         ]
       }
     },
     {
-      "id": 50,
+      "id": 79,
       "name": "spinal_cord",
       "displayName": {
         "en": "Spinal Cord",
@@ -1471,27 +2312,27 @@
       "category": "other",
       "color": "#8B5CF6",
       "bestSlice": {
-        "axial": 62,
-        "sagittal": 48,
-        "coronal": 34
+        "axial": 115,
+        "sagittal": 152,
+        "coronal": 95
       },
       "sliceRange": {
         "axial": [
-          59,
-          66
+          100,
+          430
         ],
         "sagittal": [
-          43,
-          111
+          143,
+          160
         ],
         "coronal": [
-          23,
-          38
+          89,
+          130
         ]
       }
     },
     {
-      "id": 51,
+      "id": 80,
       "name": "spleen",
       "displayName": {
         "en": "Spleen",
@@ -1500,27 +2341,56 @@
       "category": "organ",
       "color": "#EF4444",
       "bestSlice": {
-        "axial": 105,
-        "sagittal": 106,
-        "coronal": 39
+        "axial": 245,
+        "sagittal": 78,
+        "coronal": 126
       },
       "sliceRange": {
         "axial": [
-          78,
-          111
+          215,
+          268
         ],
         "sagittal": [
-          82,
-          111
+          65,
+          126
         ],
         "coronal": [
-          22,
-          57
+          98,
+          159
         ]
       }
     },
     {
-      "id": 52,
+      "id": 81,
+      "name": "sternum",
+      "displayName": {
+        "en": "Sternum",
+        "ko": "흉골"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 397,
+        "sagittal": 155,
+        "coronal": 204
+      },
+      "sliceRange": {
+        "axial": [
+          297,
+          405
+        ],
+        "sagittal": [
+          133,
+          170
+        ],
+        "coronal": [
+          170,
+          211
+        ]
+      }
+    },
+    {
+      "id": 82,
       "name": "stomach",
       "displayName": {
         "en": "Stomach",
@@ -1529,27 +2399,172 @@
       "category": "organ",
       "color": "#EF4444",
       "bestSlice": {
-        "axial": 77,
-        "sagittal": 104,
-        "coronal": 75
+        "axial": 251,
+        "sagittal": 131,
+        "coronal": 193
       },
       "sliceRange": {
         "axial": [
-          54,
-          88
+          190,
+          272
         ],
         "sagittal": [
-          81,
-          111
+          102,
+          185
         ],
         "coronal": [
-          45,
-          81
+          129,
+          223
         ]
       }
     },
     {
-      "id": 53,
+      "id": 83,
+      "name": "subclavian_artery_left",
+      "displayName": {
+        "en": "Subclavian Artery Left",
+        "ko": "Subclavian Artery Left"
+      },
+      "category": "vessel",
+      "color": "#3B82F6",
+      "bestSlice": {
+        "axial": 413,
+        "sagittal": 137,
+        "coronal": 145
+      },
+      "sliceRange": {
+        "axial": [
+          382,
+          417
+        ],
+        "sagittal": [
+          82,
+          144
+        ],
+        "coronal": [
+          141,
+          156
+        ]
+      }
+    },
+    {
+      "id": 84,
+      "name": "subclavian_artery_right",
+      "displayName": {
+        "en": "Subclavian Artery Right",
+        "ko": "Subclavian Artery Right"
+      },
+      "category": "vessel",
+      "color": "#3B82F6",
+      "bestSlice": {
+        "axial": 413,
+        "sagittal": 165,
+        "coronal": 147
+      },
+      "sliceRange": {
+        "axial": [
+          406,
+          422
+        ],
+        "sagittal": [
+          161,
+          211
+        ],
+        "coronal": [
+          142,
+          156
+        ]
+      }
+    },
+    {
+      "id": 85,
+      "name": "superior_vena_cava",
+      "displayName": {
+        "en": "Superior Vena Cava",
+        "ko": "상대정맥"
+      },
+      "category": "vessel",
+      "color": "#3B82F6",
+      "bestSlice": {
+        "axial": 359,
+        "sagittal": 171,
+        "coronal": 155
+      },
+      "sliceRange": {
+        "axial": [
+          330,
+          381
+        ],
+        "sagittal": [
+          165,
+          176
+        ],
+        "coronal": [
+          146,
+          161
+        ]
+      }
+    },
+    {
+      "id": 86,
+      "name": "thyroid_gland",
+      "displayName": {
+        "en": "Thyroid Gland",
+        "ko": "갑상선"
+      },
+      "category": "organ",
+      "color": "#EF4444",
+      "bestSlice": {
+        "axial": 419,
+        "sagittal": 158,
+        "coronal": 163
+      },
+      "sliceRange": {
+        "axial": [
+          411,
+          430
+        ],
+        "sagittal": [
+          135,
+          165
+        ],
+        "coronal": [
+          146,
+          169
+        ]
+      }
+    },
+    {
+      "id": 87,
+      "name": "trachea",
+      "displayName": {
+        "en": "Trachea",
+        "ko": "기관"
+      },
+      "category": "organ",
+      "color": "#EF4444",
+      "bestSlice": {
+        "axial": 356,
+        "sagittal": 153,
+        "coronal": 138
+      },
+      "sliceRange": {
+        "axial": [
+          340,
+          424
+        ],
+        "sagittal": [
+          123,
+          180
+        ],
+        "coronal": [
+          133,
+          164
+        ]
+      }
+    },
+    {
+      "id": 88,
       "name": "urinary_bladder",
       "displayName": {
         "en": "Urinary Bladder",
@@ -1558,27 +2573,56 @@
       "category": "organ",
       "color": "#EF4444",
       "bestSlice": {
-        "axial": 60,
-        "sagittal": 18,
-        "coronal": 59
+        "axial": 56,
+        "sagittal": 149,
+        "coronal": 140
       },
       "sliceRange": {
         "axial": [
-          45,
-          77
+          36,
+          68
         ],
         "sagittal": [
-          4,
-          32
+          128,
+          175
         ],
         "coronal": [
-          36,
-          70
+          115,
+          178
         ]
       }
     },
     {
-      "id": 54,
+      "id": 89,
+      "name": "vertebrae_C7",
+      "displayName": {
+        "en": "Vertebrae C7",
+        "ko": "Vertebrae C7"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 430,
+        "sagittal": 141,
+        "coronal": 144
+      },
+      "sliceRange": {
+        "axial": [
+          430,
+          430
+        ],
+        "sagittal": [
+          141,
+          143
+        ],
+        "coronal": [
+          143,
+          145
+        ]
+      }
+    },
+    {
+      "id": 90,
       "name": "vertebrae_L1",
       "displayName": {
         "en": "Vertebrae L1",
@@ -1587,27 +2631,27 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 62,
-        "sagittal": 95,
-        "coronal": 33
+        "axial": 222,
+        "sagittal": 153,
+        "coronal": 108
       },
       "sliceRange": {
         "axial": [
-          51,
-          75
+          203,
+          236
         ],
         "sagittal": [
-          86,
-          103
+          131,
+          176
         ],
         "coronal": [
-          18,
-          45
+          77,
+          129
         ]
       }
     },
     {
-      "id": 55,
+      "id": 91,
       "name": "vertebrae_L2",
       "displayName": {
         "en": "Vertebrae L2",
@@ -1616,27 +2660,27 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 62,
-        "sagittal": 85,
-        "coronal": 39
+        "axial": 199,
+        "sagittal": 152,
+        "coronal": 100
       },
       "sliceRange": {
         "axial": [
-          49,
-          75
+          178,
+          213
         ],
         "sagittal": [
-          75,
-          91
+          128,
+          177
         ],
         "coronal": [
-          19,
-          49
+          78,
+          133
         ]
       }
     },
     {
-      "id": 56,
+      "id": 92,
       "name": "vertebrae_L3",
       "displayName": {
         "en": "Vertebrae L3",
@@ -1645,27 +2689,27 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 61,
-        "sagittal": 75,
-        "coronal": 33
+        "axial": 175,
+        "sagittal": 151,
+        "coronal": 105
       },
       "sliceRange": {
         "axial": [
-          45,
-          78
+          154,
+          189
         ],
         "sagittal": [
-          64,
-          79
+          124,
+          181
         ],
         "coronal": [
-          22,
-          51
+          82,
+          137
         ]
       }
     },
     {
-      "id": 57,
+      "id": 93,
       "name": "vertebrae_L4",
       "displayName": {
         "en": "Vertebrae L4",
@@ -1674,27 +2718,27 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 62,
-        "sagittal": 63,
-        "coronal": 41
+        "axial": 158,
+        "sagittal": 151,
+        "coronal": 127
       },
       "sliceRange": {
         "axial": [
-          49,
-          78
+          134,
+          166
         ],
         "sagittal": [
-          55,
-          68
+          126,
+          181
         ],
         "coronal": [
-          22,
-          51
+          86,
+          140
         ]
       }
     },
     {
-      "id": 58,
+      "id": 94,
       "name": "vertebrae_L5",
       "displayName": {
         "en": "Vertebrae L5",
@@ -1703,27 +2747,27 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 61,
-        "sagittal": 52,
-        "coronal": 39
+        "axial": 131,
+        "sagittal": 151,
+        "coronal": 121
       },
       "sliceRange": {
         "axial": [
-          46,
-          77
+          114,
+          144
         ],
         "sagittal": [
-          42,
-          58
+          125,
+          181
         ],
         "coronal": [
-          22,
-          48
+          88,
+          140
         ]
       }
     },
     {
-      "id": 59,
+      "id": 95,
       "name": "vertebrae_S1",
       "displayName": {
         "en": "Vertebrae S1",
@@ -1732,27 +2776,85 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 62,
-        "sagittal": 39,
-        "coronal": 32
+        "axial": 105,
+        "sagittal": 150,
+        "coronal": 113
       },
       "sliceRange": {
         "axial": [
-          52,
-          71
+          98,
+          116
         ],
         "sagittal": [
-          37,
-          52
+          142,
+          162
         ],
         "coronal": [
-          19,
-          40
+          101,
+          128
         ]
       }
     },
     {
-      "id": 60,
+      "id": 96,
+      "name": "vertebrae_T1",
+      "displayName": {
+        "en": "Vertebrae T1",
+        "ko": "Vertebrae T1"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 429,
+        "sagittal": 148,
+        "coronal": 135
+      },
+      "sliceRange": {
+        "axial": [
+          417,
+          430
+        ],
+        "sagittal": [
+          123,
+          162
+        ],
+        "coronal": [
+          99,
+          143
+        ]
+      }
+    },
+    {
+      "id": 97,
+      "name": "vertebrae_T10",
+      "displayName": {
+        "en": "Vertebrae T10",
+        "ko": "Vertebrae T10"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 286,
+        "sagittal": 153,
+        "coronal": 88
+      },
+      "sliceRange": {
+        "axial": [
+          266,
+          299
+        ],
+        "sagittal": [
+          136,
+          172
+        ],
+        "coronal": [
+          73,
+          119
+        ]
+      }
+    },
+    {
+      "id": 98,
       "name": "vertebrae_T11",
       "displayName": {
         "en": "Vertebrae T11",
@@ -1761,27 +2863,27 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 62,
-        "sagittal": 111,
-        "coronal": 22
+        "axial": 264,
+        "sagittal": 161,
+        "coronal": 91
       },
       "sliceRange": {
         "axial": [
-          58,
-          67
+          251,
+          279
         ],
         "sagittal": [
-          109,
-          111
+          138,
+          170
         ],
         "coronal": [
-          15,
-          23
+          77,
+          122
         ]
       }
     },
     {
-      "id": 61,
+      "id": 99,
       "name": "vertebrae_T12",
       "displayName": {
         "en": "Vertebrae T12",
@@ -1790,22 +2892,254 @@
       "category": "bone",
       "color": "#E2E8F0",
       "bestSlice": {
-        "axial": 62,
-        "sagittal": 106,
-        "coronal": 30
+        "axial": 243,
+        "sagittal": 152,
+        "coronal": 105
       },
       "sliceRange": {
         "axial": [
-          55,
-          72
+          228,
+          258
         ],
         "sagittal": [
-          97,
-          111
+          136,
+          171
         ],
         "coronal": [
-          17,
-          42
+          76,
+          126
+        ]
+      }
+    },
+    {
+      "id": 100,
+      "name": "vertebrae_T2",
+      "displayName": {
+        "en": "Vertebrae T2",
+        "ko": "Vertebrae T2"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 416,
+        "sagittal": 149,
+        "coronal": 126
+      },
+      "sliceRange": {
+        "axial": [
+          403,
+          429
+        ],
+        "sagittal": [
+          125,
+          171
+        ],
+        "coronal": [
+          91,
+          138
+        ]
+      }
+    },
+    {
+      "id": 101,
+      "name": "vertebrae_T3",
+      "displayName": {
+        "en": "Vertebrae T3",
+        "ko": "Vertebrae T3"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 403,
+        "sagittal": 149,
+        "coronal": 108
+      },
+      "sliceRange": {
+        "axial": [
+          386,
+          414
+        ],
+        "sagittal": [
+          129,
+          169
+        ],
+        "coronal": [
+          85,
+          133
+        ]
+      }
+    },
+    {
+      "id": 102,
+      "name": "vertebrae_T4",
+      "displayName": {
+        "en": "Vertebrae T4",
+        "ko": "Vertebrae T4"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 388,
+        "sagittal": 150,
+        "coronal": 101
+      },
+      "sliceRange": {
+        "axial": [
+          362,
+          399
+        ],
+        "sagittal": [
+          130,
+          171
+        ],
+        "coronal": [
+          79,
+          129
+        ]
+      }
+    },
+    {
+      "id": 103,
+      "name": "vertebrae_T5",
+      "displayName": {
+        "en": "Vertebrae T5",
+        "ko": "Vertebrae T5"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 360,
+        "sagittal": 159,
+        "coronal": 105
+      },
+      "sliceRange": {
+        "axial": [
+          345,
+          384
+        ],
+        "sagittal": [
+          132,
+          174
+        ],
+        "coronal": [
+          77,
+          125
+        ]
+      }
+    },
+    {
+      "id": 104,
+      "name": "vertebrae_T6",
+      "displayName": {
+        "en": "Vertebrae T6",
+        "ko": "Vertebrae T6"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 358,
+        "sagittal": 159,
+        "coronal": 106
+      },
+      "sliceRange": {
+        "axial": [
+          329,
+          365
+        ],
+        "sagittal": [
+          131,
+          171
+        ],
+        "coronal": [
+          76,
+          121
+        ]
+      }
+    },
+    {
+      "id": 105,
+      "name": "vertebrae_T7",
+      "displayName": {
+        "en": "Vertebrae T7",
+        "ko": "Vertebrae T7"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 341,
+        "sagittal": 153,
+        "coronal": 88
+      },
+      "sliceRange": {
+        "axial": [
+          313,
+          352
+        ],
+        "sagittal": [
+          131,
+          173
+        ],
+        "coronal": [
+          75,
+          119
+        ]
+      }
+    },
+    {
+      "id": 106,
+      "name": "vertebrae_T8",
+      "displayName": {
+        "en": "Vertebrae T8",
+        "ko": "Vertebrae T8"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 324,
+        "sagittal": 154,
+        "coronal": 86
+      },
+      "sliceRange": {
+        "axial": [
+          293,
+          336
+        ],
+        "sagittal": [
+          133,
+          172
+        ],
+        "coronal": [
+          71,
+          118
+        ]
+      }
+    },
+    {
+      "id": 107,
+      "name": "vertebrae_T9",
+      "displayName": {
+        "en": "Vertebrae T9",
+        "ko": "Vertebrae T9"
+      },
+      "category": "bone",
+      "color": "#E2E8F0",
+      "bestSlice": {
+        "axial": 305,
+        "sagittal": 154,
+        "coronal": 86
+      },
+      "sliceRange": {
+        "axial": [
+          279,
+          318
+        ],
+        "sagittal": [
+          134,
+          173
+        ],
+        "coronal": [
+          72,
+          119
         ]
       }
     }
