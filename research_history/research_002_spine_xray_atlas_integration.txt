@@ -1,0 +1,176 @@
+================================================================================
+RESEARCH LOG #002 - Spine X-ray Atlas Integration
+================================================================================
+Date: 2026-04-06
+Session: 3
+Feature: Spine X-ray Atlas (new modality — Lateral + AP view)
+
+================================================================================
+OBJECTIVE
+================================================================================
+Evaluate D:\ImageLabelAPI_SPINAI datasets for applicability to BodyAtlas
+service, and integrate the most immediately usable data as a new atlas region.
+
+================================================================================
+DATA SURVEY — D:\ImageLabelAPI_SPINAI
+================================================================================
+
+Full catalog summary (from data_catalog.json + manual inspection):
+
+  Dataset                 | Modality   | Label Status | Key Stats
+  ----------------------- | ---------- | ------------ | ---------------------------------
+  0002_LXR_JPG            | X-Ray      | partial      | 21917 JPG, 1 JSON
+  0003_CXR_JPG            | X-Ray      | unlabeled    | 6946 JPG
+  0004_CXR_DICOM_ADD      | X-Ray      | unlabeled    | 388 DICOM
+  0006_AP_Lxray_Scoliosis | X-Ray (AP) | labeled      | 2796 labeled JPG, point labels
+  0010_LCT                | CT+X-Ray   | partial      | 75941 DICOM, 848 JSON
+  0011_TLCT               | CT         | unlabeled    | 79621 DICOM
+  0012_ADPCT              | CT         | unlabeled    | 128127 DICOM
+  0013_LIDC_Opensource    | CT (lung)  | unknown      | HDF5 format (LIDC-IDRI)
+  0018_SY_XR_dataset      | X-Ray      | unlabeled    | 6163 PNG
+  0019_CTSpine1K_Opensource| CT        | seg masks    | 610 NIfTI seg files (no CT imgs)
+  0022_OLIF_dataset       | CT+X-Ray   | labeled      | 150462 DICOM, 5021 labeled JPG
+  JSH / KKW_LXR / LJH     | X-Ray      | partial      | polygon labels, spine
+  PSH / SBJ_LLXR / SSM_LLXR | X-Ray   | partial      | polygon labels, spine
+  NGH                     | CT+X-Ray   | partial      | 3512 labeled JPG
+  Lat                     | X-Ray      | partial      | 26461 JSON (polygon)
+
+================================================================================
+EVALUATION — WHICH DATA TO USE
+================================================================================
+
+CANDIDATE A: CTSpine1K (0019_CTSpine1K_Opensource)
+  - Has: 610 NIfTI segmentation masks (vertebrae C1~S1+sacrum)
+  - Missing: Paired CT images (gt/ folder only has *_seg.nii.gz, no CT volumes)
+  - To use: Need to download CT images via TCIA (scripts/download_ctspine1k_images.py exists)
+  - Decision: SKIP for now — requires download, not immediately available
+
+CANDIDATE B: OLIF dataset (0022_OLIF_dataset)
+  - Has: 150k+ DICOM + 5021 labeled JPG + 2218 JSON (polygon)
+  - Issue: Clinical data (lumbar surgery cases), potential PHI
+  - Issue: OLIF-specific views (not standard anatomy atlas views)
+  - Decision: SKIP — PHI concern, specialized surgical views
+
+CANDIDATE C: LIDC Opensource (0013)
+  - Has: Lung nodule CT patches in HDF5 format
+  - Issue: Patch-based format (256x256), not full CT volumes
+  - Issue: Nodule detection dataset, not anatomy atlas
+  - Decision: SKIP — wrong use case
+
+CANDIDATE D: SBJ_LLXR labeled X-ray (SELECTED)
+  - Has: Labeled PNG/JPG spine X-rays with labelme polygon labels
+  - Lateral views: T-L spine (T5~S1), clean polygon per vertebra
+  - AP views: L-spine AP (T10~S1)
+  - Format: labelme JSON (polygon shapes) — easy to convert to BodyAtlas contour format
+  - Decision: USE — immediately available, labeled, clean quality
+
+================================================================================
+IMAGE SELECTION — BEST CANDIDATES
+================================================================================
+
+All Lateral images ranked by vertebra count:
+
+  n=15 | 679x926 | T5-T12, L1-L5, S1, sacrum_lat | 20250807_00273183_T-L-spine_Lat_1 ← SELECTED
+  n=15 | 540x926 | T5-T12, L1-L5, S1, sacrum_lat | 20250804_01482915_nobody_Lat_1
+  n=15 | 509x926 | T5-T12, L1-L5, S1, sacrum_lat | 20250808_00726245_nobody_Lat_1
+  n=14 | 557x926 | T6-T12, L1-L5, S1, sacrum_lat | 20250807_00162627_T-L-spine_Lat_1
+  n= 9 | 523x611 | L1-L5, S1, T11-T12, sacrum_lat | 20250804_01482915_nobody_Lat_3
+
+Selection criteria: widest image (679px) + most vertebrae (15) + "T-L-spine" named
+→ 20250807_00273183_T-L-spine_Lat_1.png
+
+All AP images ranked:
+
+  n=10 | 467x895 | L1-L5, S1, T10-T12, sacrum_lat | 20250806_00154057_L-spine_AP_1 ← SELECTED
+  n=10 | 467x895 | L1-L5, S1, T10-T12, sacrum_lat | 20250806_00154057_L-spine_AP_3
+
+Selection: _AP_1 (first/cleaner image)
+
+================================================================================
+DATA FORMAT CONVERSION
+================================================================================
+
+Input (labelme polygon JSON):
+  {
+    "shapes": [
+      {"label": "L1", "shape_type": "polygon", "points": [[x1,y1], [x2,y2], ...]}
+    ],
+    "imageWidth": 679, "imageHeight": 926
+  }
+
+Output (BodyAtlas contour JSON):
+  [
+    {"id": 19, "name": "L1", "contours": [[[x1,y1], [x2,y2], ...]]}
+  ]
+
+Conversion: scripts/gen_spine_xray_atlas.py
+  - Reads labelme JSON for both views
+  - Maps vertebra names to structure IDs
+  - Rounds float coordinates to 1 decimal
+  - Handles multiple contours per label (1:N polygon→contour list)
+
+================================================================================
+OUTPUT FILES GENERATED
+================================================================================
+
+public/data/spine-xray/
+  ├── lateral/0000.png         (679x926, T5-S1 lateral spine X-ray)
+  ├── ap/0000.png               (467x895, T10-S1 AP spine X-ray)
+  ├── labels/lateral/0000.json (15 vertebra contour entries)
+  ├── labels/ap/0000.json      (10 vertebra contour entries)
+  ├── info.json                (modality: X-Ray, planes: lateral/ap, 1 slice each)
+  └── structures.json          (15 structures: C1-S1+sacrum, color-coded by region)
+
+Color coding:
+  - Cervical (C1-C7): #F59E0B (amber)
+  - Thoracic (T1-T12): #10B981 (green)
+  - Lumbar (L1-L5): #3B82F6 (blue)
+  - Sacral (S1, sacrum): #8B5CF6 (purple)
+
+================================================================================
+UI IMPLEMENTATION
+================================================================================
+
+New component: src/components/SpineXrayViewer.tsx
+  - Side-by-side Lateral + AP canvas panels
+  - Hover detection via ray-casting point-in-polygon (same as AtlasViewer)
+  - Tooltip with EN name + locale translation
+  - Labels overlay toggle
+  - Cross-panel highlight: hovering a vertebra in one panel dims others in both
+
+RegionSelector.tsx:
+  - BodyRegion type: added 'spine_xray'
+  - BODY_REGIONS: added {id: 'spine_xray', label: 'Spine X-ray', icon: '🦴', free: true}
+
+page.tsx:
+  - Conditional: activeRegion === 'spine_xray' → SpineXrayViewer
+  - All other regions → AtlasViewer + StructurePanel (unchanged)
+
+================================================================================
+BUILD RESULT
+================================================================================
+
+  npx tsc --noEmit: PASS (0 errors after Structure type alignment)
+  npm run build: PASS
+  Route / size: 12.4 kB (209 kB first load JS)
+  git push: success → github.com/taeshin11/bodyatlas master
+
+================================================================================
+FUTURE WORK — SPINE DATA
+================================================================================
+
+1. CTSpine1K CT images (HIGH VALUE — adds full 3-plane spine CT atlas)
+   - Run: python scripts/gen_spine_xray_atlas.py (download portion)
+   - Or: download via TCIA portal + run TotalSegmentator
+   - Expected output: spine-ct/ region with ~400+ axial slices, C1-S1
+
+2. More Lateral images (MEDIUM)
+   - Currently 1 Lateral + 1 AP image
+   - Could add multiple views (flexion/extension, different patients)
+   - SBJ_LLXR has 2143 labeled laterals — could curate "atlas quality" subset
+
+3. Full spine X-ray StructurePanel integration (LOW)
+   - Currently no search panel for spine_xray region
+   - Would need bestSlice to use lateral/ap keys instead of axial/sagittal/coronal
+
+================================================================================
