@@ -1,0 +1,68 @@
+================================================================================
+RESEARCH LOG #004 - ImageLabelAPI_SPINAI CT 데이터 신체 부위 확인
+================================================================================
+Date: 2026-04-06
+Session: 3 (continued)
+Question: "D:\ImageLabelAPI_SPINAI CT 데이터로 head-ct atlas 개선 가능한가?"
+
+================================================================================
+DICOM HEADER INSPECTION
+================================================================================
+
+Method: pydicom.dcmread(stop_before_pixels=True) on first DICOM of each CT dataset
+
+  Dataset     | StudyDescription              | BodyPartExamined | SliceRange
+  ----------- | ----------------------------- | ---------------- | ----------
+  0010_LCT    | L-SPINE CT                    | SPINE            | 요추 부위
+  0011_TLCT   | T-L Spine CT (bone setting)   | (empty)          | 흉요추 부위
+  0012_ADPCT  | Abdomen+Pelvis CT-Enhanced    | (empty)          | -1582 ~ -1042mm (복부/골반)
+  NGH         | (X-ray only, no CT readable)  | -                | -
+
+================================================================================
+CONCLUSION
+================================================================================
+
+ImageLabelAPI_SPINAI에는 HEAD CT 데이터 없음.
+모든 CT 데이터는 척추/복부 중심:
+
+  0010_LCT    → 요추(L-spine) CT 전용
+  0011_TLCT   → 흉요추(T-L spine) CT 전용
+  0012_ADPCT  → 복부+골반(Abdomen+Pelvis) CT — 머리와 거리 먼 부위
+  NGH         → X-ray 전용 (CT 없음)
+
+따라서 이 데이터로 head-ct atlas 개선은 불가능.
+
+================================================================================
+HEAD CT ATLAS 개선 대안 (이전 research_003 요약)
+================================================================================
+
+OPTION A — TotalSegmentator v2 (권장)
+  - 환경: CUDA 가능 (torch.cuda.is_available() = True), TotalSegmentator 미설치
+  - 설치: pip install TotalSegmentator
+  - 필요한 것: 깨끗한 head CT NIfTI 1개 (TCIA에서 무료 다운 가능)
+  - 예상 구조 수: 현재 96개 → 117개 이상
+  - 예상 소요: GPU ~10분 + 파이프라인 ~20분
+
+  추천 head CT 소스:
+  - TCIA HNSCC-3D-CT: https://www.cancerimagingarchive.net/collection/hnscc/
+  - TCIA Head-Neck-PET-CT: https://www.cancerimagingarchive.net/collection/head-neck-pet-ct/
+  - 또는 기존 chest-ct에 사용한 것과 동일한 TotalSegmentator sample CT
+
+OPTION B — CADS dataset (고품질, 더 많은 구조)
+  - 167개 structures, CC BY 4.0
+  - HuggingFace: mrmrx/CADS-dataset
+  - 더 많은 준비 시간 필요
+
+OPTION C — 현재 데이터 유지 (단기)
+  - 이미 수행: info.json 버그 수정 (203→262)
+  - 96개 structures, 262 slices — 사용 가능한 품질
+  - 다음 스프린트에서 Option A 진행
+
+================================================================================
+NOTE
+================================================================================
+
+0012_ADPCT (Abdomen+Pelvis CT Enhanced, 181 slices per case) — chest-ct의
+abdomen/pelvis 구간 보완에는 사용 가능할 수 있음 (별도 research 필요)
+
+================================================================================
