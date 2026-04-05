@@ -9,6 +9,7 @@ import InstallPrompt from '@/components/InstallPrompt';
 import ErrorBoundary from '@/components/ErrorBoundary';
 import AtlasViewer from '@/components/AtlasViewer';
 import StructurePanel from '@/components/StructurePanel';
+import SpineXrayViewer from '@/components/SpineXrayViewer';
 import RegionSelector, { BODY_REGIONS, type BodyRegion } from '@/components/RegionSelector';
 import AuthGate from '@/components/AuthGate';
 import { useI18n } from '@/lib/i18n-context';
@@ -88,45 +89,56 @@ export default function Home() {
               isAuthenticated={isAuthenticated}
             />
 
-            {/* Desktop Layout */}
-            <div className="hidden lg:grid lg:grid-cols-[1fr_280px] gap-4">
-              <AtlasViewer
+            {/* Spine X-ray — full-width two-panel layout */}
+            {activeRegion === 'spine_xray' ? (
+              <SpineXrayViewer
                 onStructureSelect={handleStructureSelect}
                 selectedStructure={selectedStructure}
                 locale={locale}
-                dataPath={dataPath}
-                regionAxialRange={currentRegion.axialRange}
-                regionDefaultSlice={currentRegion.defaultSlice}
-                forceAxial={forceAxial}
               />
-              <StructurePanel
-                selectedStructure={selectedStructure}
-                onStructureSelect={handleStructureSelect}
-                locale={locale}
-                dataPath={dataPath}
-                regionAxialRange={currentRegion.axialRange}
-              />
-            </div>
+            ) : (
+              <>
+                {/* Desktop Layout */}
+                <div className="hidden lg:grid lg:grid-cols-[1fr_280px] gap-4">
+                  <AtlasViewer
+                    onStructureSelect={handleStructureSelect}
+                    selectedStructure={selectedStructure}
+                    locale={locale}
+                    dataPath={dataPath}
+                    regionAxialRange={currentRegion.axialRange}
+                    regionDefaultSlice={currentRegion.defaultSlice}
+                    forceAxial={forceAxial}
+                  />
+                  <StructurePanel
+                    selectedStructure={selectedStructure}
+                    onStructureSelect={handleStructureSelect}
+                    locale={locale}
+                    dataPath={dataPath}
+                    regionAxialRange={currentRegion.axialRange}
+                  />
+                </div>
 
-            {/* Mobile Layout — viewer on top, search below */}
-            <div className="lg:hidden space-y-3">
-              <AtlasViewer
-                onStructureSelect={handleStructureSelect}
-                selectedStructure={selectedStructure}
-                locale={locale}
-                dataPath={dataPath}
-                regionAxialRange={currentRegion.axialRange}
-                regionDefaultSlice={currentRegion.defaultSlice}
-                forceAxial={forceAxial}
-              />
-              <StructurePanel
-                selectedStructure={selectedStructure}
-                onStructureSelect={handleStructureSelect}
-                locale={locale}
-                dataPath={dataPath}
-                regionAxialRange={currentRegion.axialRange}
-              />
-            </div>
+                {/* Mobile Layout — viewer on top, search below */}
+                <div className="lg:hidden space-y-3">
+                  <AtlasViewer
+                    onStructureSelect={handleStructureSelect}
+                    selectedStructure={selectedStructure}
+                    locale={locale}
+                    dataPath={dataPath}
+                    regionAxialRange={currentRegion.axialRange}
+                    regionDefaultSlice={currentRegion.defaultSlice}
+                    forceAxial={forceAxial}
+                  />
+                  <StructurePanel
+                    selectedStructure={selectedStructure}
+                    onStructureSelect={handleStructureSelect}
+                    locale={locale}
+                    dataPath={dataPath}
+                    regionAxialRange={currentRegion.axialRange}
+                  />
+                </div>
+              </>
+            )}
           </motion.div>
         </main>
 

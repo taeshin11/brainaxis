@@ -1,0 +1,440 @@
+{
+  "totalStructures": 15,
+  "structures": [
+    {
+      "id": 0,
+      "name": "L1",
+      "displayName": {
+        "en": "L1",
+        "ko": "L1 \uc694\ucd94",
+        "ja": "L1",
+        "zh": "L1",
+        "es": "L1",
+        "de": "L1",
+        "fr": "L1"
+      },
+      "category": "bone",
+      "color": "#3B82F6",
+      "bestSlice": {
+        "lateral": 0,
+        "ap": 0
+      },
+      "sliceRange": {
+        "lateral": [
+          0,
+          0
+        ],
+        "ap": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "name": "L2",
+      "displayName": {
+        "en": "L2",
+        "ko": "L2 \uc694\ucd94",
+        "ja": "L2",
+        "zh": "L2",
+        "es": "L2",
+        "de": "L2",
+        "fr": "L2"
+      },
+      "category": "bone",
+      "color": "#3B82F6",
+      "bestSlice": {
+        "lateral": 0,
+        "ap": 0
+      },
+      "sliceRange": {
+        "lateral": [
+          0,
+          0
+        ],
+        "ap": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "name": "L3",
+      "displayName": {
+        "en": "L3",
+        "ko": "L3 \uc694\ucd94",
+        "ja": "L3",
+        "zh": "L3",
+        "es": "L3",
+        "de": "L3",
+        "fr": "L3"
+      },
+      "category": "bone",
+      "color": "#3B82F6",
+      "bestSlice": {
+        "lateral": 0,
+        "ap": 0
+      },
+      "sliceRange": {
+        "lateral": [
+          0,
+          0
+        ],
+        "ap": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "name": "L4",
+      "displayName": {
+        "en": "L4",
+        "ko": "L4 \uc694\ucd94",
+        "ja": "L4",
+        "zh": "L4",
+        "es": "L4",
+        "de": "L4",
+        "fr": "L4"
+      },
+      "category": "bone",
+      "color": "#3B82F6",
+      "bestSlice": {
+        "lateral": 0,
+        "ap": 0
+      },
+      "sliceRange": {
+        "lateral": [
+          0,
+          0
+        ],
+        "ap": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "name": "L5",
+      "displayName": {
+        "en": "L5",
+        "ko": "L5 \uc694\ucd94",
+        "ja": "L5",
+        "zh": "L5",
+        "es": "L5",
+        "de": "L5",
+        "fr": "L5"
+      },
+      "category": "bone",
+      "color": "#3B82F6",
+      "bestSlice": {
+        "lateral": 0,
+        "ap": 0
+      },
+      "sliceRange": {
+        "lateral": [
+          0,
+          0
+        ],
+        "ap": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "name": "S1",
+      "displayName": {
+        "en": "S1 (Sacrum)",
+        "ko": "S1 (\ucc9c\ucd94)",
+        "ja": "S1 (Sacrum)",
+        "zh": "S1 (Sacrum)",
+        "es": "S1 (Sacrum)",
+        "de": "S1 (Sacrum)",
+        "fr": "S1 (Sacrum)"
+      },
+      "category": "bone",
+      "color": "#8B5CF6",
+      "bestSlice": {
+        "lateral": 0,
+        "ap": 0
+      },
+      "sliceRange": {
+        "lateral": [
+          0,
+          0
+        ],
+        "ap": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "name": "T10",
+      "displayName": {
+        "en": "T10",
+        "ko": "T10 \ud749\ucd94",
+        "ja": "T10",
+        "zh": "T10",
+        "es": "T10",
+        "de": "T10",
+        "fr": "T10"
+      },
+      "category": "bone",
+      "color": "#10B981",
+      "bestSlice": {
+        "lateral": 0,
+        "ap": 0
+      },
+      "sliceRange": {
+        "lateral": [
+          0,
+          0
+        ],
+        "ap": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "name": "T11",
+      "displayName": {
+        "en": "T11",
+        "ko": "T11 \ud749\ucd94",
+        "ja": "T11",
+        "zh": "T11",
+        "es": "T11",
+        "de": "T11",
+        "fr": "T11"
+      },
+      "category": "bone",
+      "color": "#10B981",
+      "bestSlice": {
+        "lateral": 0,
+        "ap": 0
+      },
+      "sliceRange": {
+        "lateral": [
+          0,
+          0
+        ],
+        "ap": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "name": "T12",
+      "displayName": {
+        "en": "T12",
+        "ko": "T12 \ud749\ucd94",
+        "ja": "T12",
+        "zh": "T12",
+        "es": "T12",
+        "de": "T12",
+        "fr": "T12"
+      },
+      "category": "bone",
+      "color": "#10B981",
+      "bestSlice": {
+        "lateral": 0,
+        "ap": 0
+      },
+      "sliceRange": {
+        "lateral": [
+          0,
+          0
+        ],
+        "ap": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "name": "T5",
+      "displayName": {
+        "en": "T5",
+        "ko": "T5 \ud749\ucd94",
+        "ja": "T5",
+        "zh": "T5",
+        "es": "T5",
+        "de": "T5",
+        "fr": "T5"
+      },
+      "category": "bone",
+      "color": "#10B981",
+      "bestSlice": {
+        "lateral": 0,
+        "ap": 0
+      },
+      "sliceRange": {
+        "lateral": [
+          0,
+          0
+        ],
+        "ap": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "name": "T6",
+      "displayName": {
+        "en": "T6",
+        "ko": "T6 \ud749\ucd94",
+        "ja": "T6",
+        "zh": "T6",
+        "es": "T6",
+        "de": "T6",
+        "fr": "T6"
+      },
+      "category": "bone",
+      "color": "#10B981",
+      "bestSlice": {
+        "lateral": 0,
+        "ap": 0
+      },
+      "sliceRange": {
+        "lateral": [
+          0,
+          0
+        ],
+        "ap": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "name": "T7",
+      "displayName": {
+        "en": "T7",
+        "ko": "T7 \ud749\ucd94",
+        "ja": "T7",
+        "zh": "T7",
+        "es": "T7",
+        "de": "T7",
+        "fr": "T7"
+      },
+      "category": "bone",
+      "color": "#10B981",
+      "bestSlice": {
+        "lateral": 0,
+        "ap": 0
+      },
+      "sliceRange": {
+        "lateral": [
+          0,
+          0
+        ],
+        "ap": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": 12,
+      "name": "T8",
+      "displayName": {
+        "en": "T8",
+        "ko": "T8 \ud749\ucd94",
+        "ja": "T8",
+        "zh": "T8",
+        "es": "T8",
+        "de": "T8",
+        "fr": "T8"
+      },
+      "category": "bone",
+      "color": "#10B981",
+      "bestSlice": {
+        "lateral": 0,
+        "ap": 0
+      },
+      "sliceRange": {
+        "lateral": [
+          0,
+          0
+        ],
+        "ap": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": 13,
+      "name": "T9",
+      "displayName": {
+        "en": "T9",
+        "ko": "T9 \ud749\ucd94",
+        "ja": "T9",
+        "zh": "T9",
+        "es": "T9",
+        "de": "T9",
+        "fr": "T9"
+      },
+      "category": "bone",
+      "color": "#10B981",
+      "bestSlice": {
+        "lateral": 0,
+        "ap": 0
+      },
+      "sliceRange": {
+        "lateral": [
+          0,
+          0
+        ],
+        "ap": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": 14,
+      "name": "sacrum_lat",
+      "displayName": {
+        "en": "Sacrum",
+        "ko": "\ucc9c\uace8",
+        "ja": "Sacrum",
+        "zh": "Sacrum",
+        "es": "Sacrum",
+        "de": "Sacrum",
+        "fr": "Sacrum"
+      },
+      "category": "bone",
+      "color": "#8B5CF6",
+      "bestSlice": {
+        "lateral": 0,
+        "ap": 0
+      },
+      "sliceRange": {
+        "lateral": [
+          0,
+          0
+        ],
+        "ap": [
+          0,
+          0
+        ]
+      }
+    }
+  ]
+}
